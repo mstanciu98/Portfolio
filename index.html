@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mihai Stanciu — Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:        #1b1b1b;
+      --bg2:       #232323;
+      --bg3:       #2a2a2a;
+      --line:      #3a3a3a;
+      --text:      #c8c8c8;
+      --text-dim:  #757575;
+      --white:     #e8e8e8;
+      --accent:    #4d9de0;
+      --accent2:   #e07b4d;
+      --gold:      #c9a84c;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Titillium Web', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 64px;
+      background: rgba(27,27,27,0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(6px);
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 640px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(27,27,27,0.3) 0%, rgba(27,27,27,0.85) 70%, var(--bg) 100%),
+        /* placeholder — replace src with your hero image */
+        url('images/hero.jpg') center/cover no-repeat;
+      background-color: #0f0f0f;
+    }
+
+    /* Animated grid overlay — pure CSS, Valve-industrial feel */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(77,157,224,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(77,157,224,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridPan 20s linear infinite;
+    }
+
+    @keyframes gridPan {
+      0%   { background-position: 0 0; }
+      100% { background-position: 60px 60px; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 48px 80px;
+      max-width: 900px;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.3s forwards;
+    }
+
+    .hero-title {
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 900;
+      line-height: 1.0;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.5s forwards;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      margin-top: 24px;
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--text);
+      max-width: 560px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.7s forwards;
+    }
+
+    .hero-cta {
+      margin-top: 36px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.9s forwards;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 28px;
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .btn-primary:hover { background: transparent; color: var(--accent); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--line);
+    }
+    .btn-ghost:hover { border-color: var(--text); color: var(--white); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ─── SECTION WRAPPER ─── */
+    section { padding: 80px 48px; max-width: 1200px; margin: 0 auto; }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      margin-bottom: 48px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 20px;
+    }
+
+    .section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+
+    /* ─── PROJECT ACCORDION ─── */
+    .projects { padding-top: 60px; }
+
+    .category-group { margin-bottom: 4px; }
+
+    .category-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      background: var(--bg2);
+      border: none;
+      border-top: 1px solid var(--line);
+      color: var(--white);
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-align: left;
+    }
+    .category-btn:hover { background: var(--bg3); }
+    .category-btn .cat-meta {
+      font-size: 0.72rem;
+      font-weight: 400;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+    }
+    .category-btn .chevron {
+      font-size: 1.2rem;
+      color: var(--text-dim);
+      transition: transform 0.3s;
+    }
+    .category-btn.open .chevron { transform: rotate(90deg); }
+
+    .category-panel {
+      display: none;
+      background: var(--bg2);
+      border-top: 1px solid var(--line);
+    }
+    .category-panel.open { display: block; }
+
+    /* ─── PROJECT CARD ─── */
+    .project-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .project-card:last-child { border-bottom: none; }
+
+    .project-images {
+      position: relative;
+      background: #111;
+      min-height: 280px;
+      overflow: hidden;
+    }
+
+    .project-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0.85;
+      transition: opacity 0.3s, transform 0.5s;
+    }
+    .project-images:hover img { opacity: 1; transform: scale(1.02); }
+
+    .img-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #141414;
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .img-placeholder:hover { background: #1a1a1a; }
+
+    .img-placeholder svg {
+      width: 40px;
+      height: 40px;
+      opacity: 0.3;
+    }
+
+    /* image grid for multiple photos */
+    .img-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+    }
+    .img-grid-2 .project-images { min-height: 140px; }
+
+    .project-info {
+      padding: 36px 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-role {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .project-name {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    .project-org {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+      letter-spacing: 0.06em;
+    }
+
+    .project-desc {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .project-highlights {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    .project-highlights li {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      padding: 4px 0 4px 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .project-highlights li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.7rem;
+      top: 5px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+    }
+
+    .tag {
+      padding: 3px 10px;
+      border: 1px solid var(--line);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .award-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+
+    /* ─── ABOUT ─── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .about-photo {
+      position: relative;
+    }
+
+    .about-photo img {
+      width: 100%;
+      display: block;
+      filter: grayscale(20%);
+    }
+
+    .about-photo-placeholder {
+      width: 100%;
+      padding-top: 120%;
+      background: #141414;
+      border: 1px dashed var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+    }
+    .about-photo-placeholder span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-align: center;
+    }
+
+    .about-text h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .about-text p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .skills-list {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .skill-item {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .skill-item::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ─── CONTACT ─── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+
+    .contact-blurb {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 20px;
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .contact-link:hover { border-color: var(--accent); background: var(--bg3); }
+    .contact-link .cl-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      display: block;
+    }
+    .contact-link .cl-value {
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 32px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      letter-spacing: 0.08em;
+    }
+
+    footer a { color: var(--text-dim); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    /* ─── DIVIDER ─── */
+    .full-divider {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 0;
+    }
+
+    /* ─── SCROLLBAR ─── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--line); }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 860px) {
+      nav { padding: 0 24px; }
+      section { padding: 60px 24px; }
+      .hero-content { padding: 0 24px 60px; }
+      .project-card { grid-template-columns: 1fr; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .nav-links { display: none; }
+      footer { flex-direction: column; gap: 12px; text-align: center; }
+    }
+
+    /* ─── EDIT HELPERS (add class 'editable' to elements you'll replace) ─── */
+    /* These are visual hints in edit mode only – remove for production */
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <a class="nav-logo" href="#top">Mihai Stanciu</a>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <!-- Add: <li><a href="resume.pdf" target="_blank">Résumé</a></li> -->
+  </ul>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<div id="top" class="hero">
+  <div class="hero-bg">
+    <!--
+      HOW TO ADD A HERO IMAGE:
+      1. Place your image in an "images/" folder next to this file
+      2. The CSS background-image in .hero-bg already points to "images/hero.jpg"
+      3. Update that path if your filename differs
+    -->
+  </div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Lead Design Engineer &nbsp;·&nbsp; Researcher &nbsp;·&nbsp; Roboticist</p>
+    <h1 class="hero-title">Mihai<br><em>Stanciu</em></h1>
+    <p class="hero-sub">
+      Building surgical instruments, inflatable robots, autonomous rovers,
+      and optimization tools — from concept through prototype to deployment.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#projects">View Projects</a>
+      <a class="btn btn-ghost" href="#contact">Get In Touch</a>
+    </div>
+  </div>
+</div>
+
+<hr class="full-divider">
+
+<!-- ═══ PROJECTS ═══ -->
+<div id="projects" style="background: var(--bg);">
+  <section class="projects" style="padding-bottom: 0;">
+    <div class="section-header">
+      <span class="section-label">Portfolio</span>
+      <h2 class="section-title">Selected Work</h2>
+    </div>
+  </section>
+
+  <!-- ── CATEGORY: Medical Device Design ── -->
+  <div class="category-group" style="max-width:1200px; margin:0 auto; padding: 0 48px;">
+    <button class="category-btn open" onclick="toggleCategory(this)">
+      <span>Medical Device Design</span>
+      <span style="display:flex; align-items:center; gap:20px;">
+        <span class="cat-meta">Lead Design Engineer &nbsp;·&nbsp; 2025 – Present</span>
+        <span class="chevron">›</span>
+      </span>
+    </button>
+    <div class="category-panel open">
+      <!-- PROJECT: Handhold -->
+      <div class="project-card">
+        <div class="project-images">
+          <!--
+            ADD IMAGES HERE:
+            Replace the placeholder div below with:
+            <img src="images/handhold-1.jpg" alt="Handhold surgical clip">
+
+            For multiple images, use this grid structure:
+            <div class="img-grid-2">
+              <div class="project-images"><img src="images/handhold-1.jpg" alt="..."></div>
+              <div class="project-images"><img src="images/handhold-2.jpg" alt="..."></div>
+            </div>
+          -->
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            Add image: images/handhold.jpg
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="award-badge">🏆 2026 BYU Student Innovator Finalist · $4,000 Award</div>
+          <p class="project-role">Lead Design Engineer</p>
+          <h3 class="project-name">Handhold — Surgical Clip for Hand Surgery</h3>
+          <p class="project-org">Provo, Utah &nbsp;·&nbsp; July 2025 – Present</p>
+          <p class="project-desc">
+            A surgical clip for finger stabilization and incision retraction that interfaces with the
+            Lead Hand surgical positioning system. Designed to reduce operating time and required
+            personnel during hand surgery — used in a live procedure at Spanish Fork Hospital.
+          </p>
+          <ul class="project-highlights">
+            <li>30+ prototypes refined through direct feedback from three hand surgeons</li>
+            <li>Met autoclave sterilization requirements for clinical use</li>
+            <li>Evaluated single-use vs. reusable variants based on market demand and margins</li>
+            <li>Finalist among 38 teams at the 2026 BYU Student Innovator of the Year competition</li>
+          </ul>
+          <!--
+            ADD YOUR NOTES / COMMENTS HERE:
+            <p class="project-desc" style="margin-top: 12px; font-style: italic; color: var(--text-dim);">
+              Your personal notes, lessons learned, design decisions...
+            </p>
+          -->
+          <div class="project-tags">
+            <span class="tag">Medical Device</span>
+            <span class="tag">Iterative Prototyping</span>
+            <span class="tag">Sterilization</span>
+            <span class="tag">SOLIDWORKS</span>
+            <span class="tag">Design for Manufacturing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CATEGORY: Robotics Research ── -->
+  <div class="category-group" style="max-width:1200px; margin:0 auto; padding: 0 48px;">
+    <button class="category-btn" onclick="toggleCategory(this)">
+      <span>Robotics Research</span>
+      <span style="display:flex; align-items:center; gap:20px;">
+        <span class="cat-meta">Research Assistant &nbsp;·&nbsp; 2022 – Present</span>
+        <span class="chevron">›</span>
+      </span>
+    </button>
+    <div class="category-panel">
+
+      <!-- PROJECT: Inflatable Truss -->
+      <div class="project-card">
+        <div class="project-images">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            Add image: images/inflatable-truss.jpg
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="award-badge">🚀 Presented at NASA Big Idea Challenge Forum, Las Vegas</div>
+          <p class="project-role">Compliant Mechanisms &amp; Robotics Research Assistant</p>
+          <h3 class="project-name">Inflatable Robotic Truss — Automated Roller</h3>
+          <p class="project-org">BYU Dept. of Mechanical Engineering &nbsp;·&nbsp; June 2024 – Present</p>
+          <p class="project-desc">
+            Redesigned the automated roller mechanism for an inflatable robotic truss, achieving
+            dramatic weight and cost reductions while doubling structural strength. Engineered a
+            multi-stage gear train using off-the-shelf components to improve torque and reliability.
+          </p>
+          <ul class="project-highlights">
+            <li>31% weight reduction, 51% cost savings, 2× structural strength</li>
+            <li>Constructed 21 roller units with custom vise fixtures for precision machining</li>
+            <li>Presented to NASA planetary scientists at 2024 Big Idea Challenge Forum &amp; LSIC</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">CAD</span>
+            <span class="tag">Gear Train Design</span>
+            <span class="tag">Machining</span>
+            <span class="tag">Structural Analysis</span>
+            <span class="tag">NASA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT: Continuum Manipulators -->
+      <div class="project-card">
+        <div class="project-images">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            Add image: images/continuum-arm.jpg
+          </div>
+        </div>
+        <div class="project-info">
+          <p class="project-role">Robotics &amp; Dynamics Research Assistant</p>
+          <h3 class="project-name">Pneumatic Continuum Serial Manipulators</h3>
+          <p class="project-org">BYU Dept. of Mechanical Engineering &nbsp;·&nbsp; March 2022 – September 2023</p>
+          <p class="project-desc">
+            Engineered and assembled four pneumatic continuum serial manipulators for in-house
+            dynamic modeling research. Performed tensile testing and stress–strain analysis to select
+            spine materials across 12 continuum joints.
+          </p>
+          <ul class="project-highlights">
+            <li>Tensile testing across 12 continuum joints to optimize spine material selection</li>
+            <li>Assembled and integrated pneumatic joints for experimental validation</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Soft Robotics</span>
+            <span class="tag">Material Testing</span>
+            <span class="tag">Pneumatics</span>
+            <span class="tag">Dynamic Modeling</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── CATEGORY: Robotics Coursework & Competition ── -->
+  <div class="category-group" style="max-width:1200px; margin:0 auto; padding: 0 48px;">
+    <button class="category-btn" onclick="toggleCategory(this)">
+      <span>Competition &amp; Coursework Robots</span>
+      <span style="display:flex; align-items:center; gap:20px;">
+        <span class="cat-meta">Rover · Arm · Mechatronics</span>
+        <span class="chevron">›</span>
+      </span>
+    </button>
+    <div class="category-panel">
+
+      <!-- PROJECT: Mars Rover -->
+      <div class="project-card">
+        <div class="project-images">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            Add image: images/mars-rover.jpg
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="award-badge">🏆 3rd Place — 2024 International University Rover Challenge · 102 Universities</div>
+          <p class="project-role">Mechanical Subsystem Team Leader</p>
+          <h3 class="project-name">BYU Mars Rover</h3>
+          <p class="project-org">BYU Mars Rover Team &nbsp;·&nbsp; September 2023 – June 2024</p>
+          <p class="project-desc">
+            Led two teams of six engineers to design and integrate the rover's wheel, serial
+            manipulator, elevator, and antenna subsystems. Developed testing procedures that
+            significantly reduced backlash and improved precision in the manipulator arm.
+          </p>
+          <ul class="project-highlights">
+            <li>3rd place overall among 102 universities worldwide</li>
+            <li>Highest score among all teams in two of four competition tasks</li>
+            <li>Quantified joint uncertainty and drove backlash reduction through structured testing</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Systems Integration</span>
+            <span class="tag">Team Leadership</span>
+            <span class="tag">Serial Manipulator</span>
+            <span class="tag">Mechanical Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT: Kuka Arm -->
+      <div class="project-card">
+        <div class="project-images">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            Add image: images/kuka-arm.jpg
+          </div>
+        </div>
+        <div class="project-info">
+          <p class="project-role">ME EN 537: Robotics — BYU</p>
+          <h3 class="project-name">Goal Convergence &amp; Obstacle Avoidance — Kuka LBR Arm</h3>
+          <p class="project-org">Brigham Young University &nbsp;·&nbsp; September – December 2023</p>
+          <p class="project-desc">
+            Built a complete Python kinematics library for a 7-DOF Kuka LBR arm including DH
+            parameterization, forward/inverse kinematics, Jacobian computation, and a potential
+            field obstacle avoidance algorithm for both static and dynamic obstacles.
+          </p>
+          <ul class="project-highlights">
+            <li>Implemented Denavit–Hartenberg parameterization for 7-DOF arm</li>
+            <li>Potential field methods applied at joints and along links for obstacle avoidance</li>
+            <li>Generated linear, circular, and spiral dynamic obstacle trajectories for testing</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Kinematics</span>
+            <span class="tag">Jacobian</span>
+            <span class="tag">Potential Fields</span>
+            <span class="tag">7-DOF</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT: Ball Robot -->
+      <div class="project-card">
+        <div class="project-images">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            Add image: images/ball-robot.jpg
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="award-badge">🏆 Highest Score — 2022 ME EN 330 Design Competition · 20 Teams</div>
+          <p class="project-role">ME EN 330: Design of Mechatronic Systems — BYU</p>
+          <h3 class="project-name">Autonomous Ball Scoring Competition Robot</h3>
+          <p class="project-org">Brigham Young University &nbsp;·&nbsp; January – April 2022</p>
+          <p class="project-desc">
+            Designed and built an autonomous mechatronic robot to collect, sort, and score black
+            and white ping-pong balls into dynamically changing targets — achieving 29/30 shots
+            and the highest competition score among 20 teams.
+          </p>
+          <ul class="project-highlights">
+            <li>29/30 successful shots; highest score among 20 competing teams</li>
+            <li>Flywheel shooting system with color-based servo-actuated ball selection</li>
+            <li>PIC24 microcontroller in C: line following, sensor fusion, autonomous navigation</li>
+            <li>Laser-cut &amp; heat-formed acrylic electronics enclosure</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Mechatronics</span>
+            <span class="tag">C / PIC24</span>
+            <span class="tag">Flywheel Design</span>
+            <span class="tag">Laser Cutting</span>
+            <span class="tag">Autonomous Control</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── CATEGORY: Software & Optimization ── -->
+  <div class="category-group" style="max-width:1200px; margin:0 auto; padding: 0 48px;">
+    <button class="category-btn" onclick="toggleCategory(this)">
+      <span>Software &amp; Optimization</span>
+      <span style="display:flex; align-items:center; gap:20px;">
+        <span class="cat-meta">Python · CAD API · SLSQP</span>
+        <span class="chevron">›</span>
+      </span>
+    </button>
+    <div class="category-panel">
+
+      <!-- PROJECT: Ski Tool -->
+      <div class="project-card">
+        <div class="project-images">
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            Add image: images/ski-optimizer.jpg
+          </div>
+        </div>
+        <div class="project-info">
+          <p class="project-role">ME EN 575: Optimization Techniques — BYU</p>
+          <h3 class="project-name">Personalized Ski Design Optimization Tool</h3>
+          <p class="project-org">Brigham Young University &nbsp;·&nbsp; March – April 2025</p>
+          <p class="project-desc">
+            A Python optimization framework that generates custom, lightweight ski geometries from
+            user-specific inputs (height, weight, riding style). Integrated a live Onshape CAD model
+            via API to update geometry and retrieve mass at each iteration.
+          </p>
+          <ul class="project-highlights">
+            <li>~30% mass reduction vs. commercial skis while maintaining performance constraints</li>
+            <li>Live Onshape CAD integration via API — geometry updates at each optimizer step</li>
+            <li>SLSQP constrained optimization over length, waist width, camber, thickness</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">SLSQP</span>
+            <span class="tag">Onshape API</span>
+            <span class="tag">Parametric Design</span>
+            <span class="tag">Optimization</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="padding-bottom: 80px;"></div>
+</div>
+
+<hr class="full-divider">
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="section-header">
+    <span class="section-label">Background</span>
+    <h2 class="section-title">About Me</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-photo">
+      <!--
+        ADD YOUR PHOTO HERE:
+        Replace the placeholder below with:
+        <img src="images/mihai.jpg" alt="Mihai Stanciu">
+      -->
+      <div class="about-photo-placeholder">
+        <span>Add photo:<br>images/mihai.jpg</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <h3>Engineering at the intersection of mechanism, robotics, and manufacturing.</h3>
+      <p>
+        I'm a mechanical engineering student at Brigham Young University with a focus on
+        design, robotics, and optimization. My work spans surgical device development,
+        NASA-funded robotics research, autonomous rover systems, and software-driven
+        design tools.
+      </p>
+      <p>
+        I'm drawn to problems that require tight iteration loops — going from sketch to
+        prototype to tested hardware as quickly and rigorously as possible. Whether it's
+        a single-use surgical clip or a 21-unit inflatable robot roller, I care about the
+        details that make the difference between a part that works in the lab and one that
+        works in the field.
+      </p>
+      <!--
+        ADD MORE ABOUT YOURSELF HERE — replace this comment with additional paragraphs,
+        interests, research interests, or anything else you want to communicate.
+      -->
+      <div class="skills-list">
+        <span class="skill-item">SOLIDWORKS / Onshape CAD</span>
+        <span class="skill-item">Python</span>
+        <span class="skill-item">Mechanism Design</span>
+        <span class="skill-item">C / PIC Microcontrollers</span>
+        <span class="skill-item">Prototyping &amp; Iteration</span>
+        <span class="skill-item">Constrained Optimization</span>
+        <span class="skill-item">Lathe, Mill, Machining</span>
+        <span class="skill-item">Robotics Kinematics</span>
+        <span class="skill-item">Design for Manufacturing</span>
+        <span class="skill-item">Tensile &amp; Stress Testing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="full-divider">
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="section-header">
+    <span class="section-label">Contact</span>
+    <h2 class="section-title">Get In Touch</h2>
+  </div>
+  <div class="contact-grid">
+    <p class="contact-blurb">
+      I'm always open to conversations about engineering, research collaborations,
+      internship opportunities, or just interesting problems worth solving. Reach out
+      through any of the channels below.
+    </p>
+    <div class="contact-links">
+      <!-- UPDATE THESE WITH YOUR ACTUAL LINKS -->
+      <a class="contact-link" href="mailto:your@email.com">
+        <div>
+          <span class="cl-label">Email</span>
+          <span class="cl-value">your@email.com</span>
+        </div>
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/yourprofile" target="_blank">
+        <div>
+          <span class="cl-label">LinkedIn</span>
+          <span class="cl-value">linkedin.com/in/yourprofile</span>
+        </div>
+      </a>
+      <a class="contact-link" href="https://github.com/yourusername" target="_blank">
+        <div>
+          <span class="cl-label">GitHub</span>
+          <span class="cl-value">github.com/yourusername</span>
+        </div>
+      </a>
+      <a class="contact-link" href="resume.pdf" target="_blank">
+        <div>
+          <span class="cl-label">Résumé</span>
+          <span class="cl-value">Download PDF</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="full-divider">
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <span>© 2026 Mihai Stanciu</span>
+  <span style="color: var(--line);">Mechanical Engineering · BYU</span>
+  <a href="#top">Back to top ↑</a>
+</footer>
+
+<script>
+  function toggleCategory(btn) {
+    const panel = btn.nextElementSibling;
+    const isOpen = panel.classList.contains('open');
+    panel.classList.toggle('open', !isOpen);
+    btn.classList.toggle('open', !isOpen);
+  }
+
+  // Fade in project cards as they scroll into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(card);
+  });
+</script>
+
+</body>
+</html>
