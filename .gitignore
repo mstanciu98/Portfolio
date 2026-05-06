@@ -1,3 +1,16 @@
 *.mp4
 *.mov
-/images/2*
+# /images/2019_rocketry/
+# /images/2020_curiosity_replica/
+# /images/2021_robotic_arm/
+# /images/2022_ball_scoring_robot/
+# /images/2023_kuka_arm_simulation/
+# /images/2023_pipsqueak_engine/
+# /images/2023_rad_arms/
+/images/2024_camping_shovel/
+/images/2024_ecen_technician/
+/images/2024_mars_rover/
+/images/2025_ski_optimization/
+/images/2026_handhold/
+/images/2026_topology_optimization_study/
+/images/2026_truss_robot/
