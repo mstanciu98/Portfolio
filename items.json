@@ -1,7 +1,7 @@
 [
   {
     "name": "Handhold — Surgical Clip for Hand Surgery",
-    "category": "Medical Device Design",
+    "category": "Medical Devices & Product Development",
     "role": "Lead Design Engineer",
     "org": "Provo, Utah",
     "dates": "July 2025 – Present",
@@ -15,20 +15,272 @@
     ],
     "tags": ["Medical Device Design", "Iterative Prototyping", "Autoclave Sterilization", "SOLIDWORKS", "Design for Manufacturing", "Clinical Validation"],
     "images": [
-      "images/2026_handhold/sioy_competition.jpg",
-      "images/2026_handhold/autoclave_prototype.jpg",
-      "images/2026_handhold/handhold_surgery.jpg",
-      "images/2026_handhold/doctor_visit.jpg",
-      "images/2026_handhold/handhold_design.png",
-      "images/2026_handhold/prototype_history.png",
-      "images/2026_handhold/handhold_clip.png",
-      "images/2026_handhold/aluminum_prototype.jpg",
-      "images/2026_handhold/preliminary_mold_design_injection_molding.png"
+      {"src": "images/2026_handhold/sioy_competition.jpg", "description": "SIOY Competition Presentation"},
+      {"src": "images/2026_handhold/autoclave_prototype.jpg", "description": "Autoclave Prototype"},
+      {"src": "images/2026_handhold/handhold_surgery.jpg", "description": "Handhold Surgery"},
+      {"src": "images/2026_handhold/doctor_visit.jpg", "description": "Doctor Visit"},
+      {"src": "images/2026_handhold/handhold_design.png", "description": "Handhold Design"},
+      {"src": "images/2026_handhold/prototype_history.png", "description": "Prototype History"},
+      {"src": "images/2026_handhold/handhold_clip.png", "description": "Handhold Clip"},
+      {"src": "images/2026_handhold/aluminum_prototype.jpg", "description": "Aluminum Prototype"},
+      {"src": "images/2026_handhold/preliminary_mold_design_injection_molding.png", "description": "Preliminary Mold Design"},
+      {"type": "video", "url": "https://www.youtube.com/watch?v=ANe_HW4X8oc", "description": "Handhold demo video"}
+    ]
+  },
+  {
+    "name": "Pneumatic Continuum Serial Manipulators",
+    "category": "Robotics & Autonomous Systems",
+    "role": "Robotics & Dynamics Research Assistant",
+    "org": "BYU Dept. of Mechanical Engineering",
+    "dates": "March 2022 – September 2023",
+    "award": null,
+    "description": "Engineered and assembled four pneumatic continuum serial manipulators for in-house dynamic modeling research. Performed tensile testing and stress–strain analysis to select spine materials across 12 continuum joints.",
+    "highlights": [
+      "Tensile testing across 12 continuum joints to optimize spine material selection",
+      "Assembled and integrated pneumatic joints for experimental validation"
+    ],
+    "tags": ["Soft Robotics", "Tensile Testing & Stress-Strain Analysis", "Pneumatic Actuation", "Dynamic Modeling", "Robot Assembly"],
+    "images": [
+      "images/2023_rad_arms/continuum_joints.jpg",
+      "images/2023_rad_arms/continuum_arm_config.jpg",
+      "images/2023_rad_arms/tensile_testing_joint_spine.jpg",
+      "images/2023_rad_arms/continuum_arm_render.png",
+      "images/2023_rad_arms/continuum_arm.jpg"
+    ]
+  },
+  {
+    "name": "BYU Mars Rover",
+    "category": "Robotics & Autonomous Systems",
+    "role": "Mechanical Subsystem Team Leader",
+    "org": "BYU Mars Rover Team",
+    "dates": "September 2023 – June 2024",
+    "award": "3rd Place — 2024 International University Rover Challenge · 102 Universities",
+    "description": "Led two teams of six engineers to design and integrate the rover's wheel, serial manipulator, elevator, and antenna subsystems. Developed testing procedures that significantly reduced backlash and improved precision in the manipulator arm.",
+    "highlights": [
+      "3rd place overall among 102 universities worldwide",
+      "Highest score among all teams in two of four competition tasks",
+      "Quantified joint uncertainty and drove backlash reduction through structured testing"
+    ],
+    "tags": ["Subsystem Team Leadership", "Systems Integration", "Serial Manipulator Design", "Backlash Reduction", "Mechanical Design"],
+    "images": [
+      "images/2024_mars_rover/rover_and_mock_lander.jpg",
+      "images/2024_mars_rover/rover_heat_stroke.jpg",
+      "images/2024_mars_rover/team_award_3rd_place.jpg",
+      "images/2024_mars_rover/rover_practice.jpg",
+      "images/2024_mars_rover/wheel_with_quick_tread_attach_system.jpg",
+      "images/2024_mars_rover/robotic_arm.jpg",
+      "images/2024_mars_rover/elevator_adapter_plate.jpg"
+    ]
+  },
+  {
+    "name": "Goal Convergence & Obstacle Avoidance — Kuka LBR Arm",
+    "category": "Robotics & Autonomous Systems",
+    "role": "ME EN 537: Robotics — BYU",
+    "org": "Brigham Young University",
+    "dates": "September – December 2023",
+    "award": null,
+    "description": "Built a complete Python kinematics library for a 7-DOF Kuka LBR arm including DH parameterization, forward/inverse kinematics, Jacobian computation, and a potential field obstacle avoidance algorithm for both static and dynamic obstacles.",
+    "highlights": [
+      "Implemented Denavit–Hartenberg parameterization for 7-DOF arm",
+      "Potential field methods applied at joints and along links for obstacle avoidance",
+      "Generated linear, circular, and spiral dynamic obstacle trajectories for testing"
+    ],
+    "tags": ["Python", "Forward & Inverse Kinematics", "Jacobian Computation", "Potential Field Obstacle Avoidance", "7-DOF Arm"],
+    "images": []
+  },
+  {
+    "name": "Autonomous Ball Scoring Competition Robot",
+    "category": "Robotics & Autonomous Systems",
+    "role": "ME EN 330: Design of Mechatronic Systems — BYU",
+    "org": "Brigham Young University",
+    "dates": "January – April 2022",
+    "award": "Highest Score — 2022 ME EN 330 Design Competition · 20 Teams",
+    "description": "Designed and built an autonomous mechatronic robot to collect, sort, and score black and white ping-pong balls into dynamically changing targets — achieving 29/30 shots and the highest competition score among 20 teams.",
+    "highlights": [
+      "29/30 successful shots; highest score among 20 competing teams",
+      "Flywheel shooting system with color-based servo-actuated ball selection",
+      "PIC24 microcontroller in C: line following, sensor fusion, autonomous navigation",
+      "Laser-cut & heat-formed acrylic electronics enclosure"
+    ],
+    "tags": ["Mechatronics", "Embedded C / PIC24 Microcontroller", "Flywheel Mechanism Design", "Laser Cutting & Fabrication", "Autonomous Navigation & Sensor Fusion"],
+    "images": [
+      "images/2022_ball_scoring_robot/storing_system.png",
+      "images/2022_ball_scoring_robot/bottom.png",
+      "images/2022_ball_scoring_robot/launching_system.png",
+      "images/2022_ball_scoring_robot/completed_robot.png",
+      "images/2022_ball_scoring_robot/render_front.png"
+    ]
+  },
+  {
+    "name": "Personalized Ski Design Optimization Tool",
+    "category": "Engineering Software & Optimization",
+    "role": "ME EN 575: Optimization Techniques — BYU",
+    "org": "Brigham Young University",
+    "dates": "March – April 2025",
+    "award": null,
+    "description": "A Python optimization framework that generates custom, lightweight ski geometries from user-specific inputs (height, weight, riding style). Integrated a live Onshape CAD model via API to update geometry and retrieve mass at each iteration.",
+    "highlights": [
+      "~30% mass reduction vs. commercial skis while maintaining performance constraints",
+      "Live Onshape CAD integration via API — geometry updates at each optimizer step",
+      "SLSQP constrained optimization over length, waist width, camber, thickness"
+    ],
+    "tags": ["Python", "SLSQP Constrained Optimization", "Onshape CAD API Integration", "Parametric Geometry Design", "Engineering Design Optimization"],
+    "images": [
+      "images/2025_ski_optimization/python_framework.png",
+      "images/2025_ski_optimization/optimization_framework.png",
+      "images/2025_ski_optimization/ski_optimization.gif",
+      "images/2025_ski_optimization/design_variables.png",
+      "images/2025_ski_optimization/results_2.png",
+      "images/2025_ski_optimization/results_1.png",
+      "images/2025_ski_optimization/onshape_api.png"
+    ]
+  },
+  {
+    "name": "High-Power Rocketry Project",
+    "category": "Independent Engineering Projects",
+    "role": "Project Builder",
+    "org": "Personal Project",
+    "dates": "2019",
+    "award": null,
+    "description": "Placeholder description for this rocketry project. Add the final project summary, design goals, build process, and launch outcome here.",
+    "highlights": [
+      "Placeholder highlight for design and fabrication work",
+      "Placeholder highlight for testing, launch preparation, or results",
+      "Placeholder highlight for lessons learned or technical skills"
+    ],
+    "tags": ["Rocketry", "Fabrication", "Testing", "Design"],
+    "images": [
+      "images/2019_rocketry/fin_allignment.jpg",
+      "images/2019_rocketry/landing.jpg",
+      "images/2019_rocketry/lunchpad.jpg",
+      "images/2019_rocketry/me_and_rocket.jpg",
+      "images/2019_rocketry/rocket.jpg"
+    ]
+  },
+  {
+    "name": "Curiosity Rover Replica",
+    "category": "Independent Engineering Projects",
+    "role": "Project Designer",
+    "org": "Personal Project",
+    "dates": "2020",
+    "award": null,
+    "description": "Placeholder description for this Curiosity rover replica project. Add the final project summary, CAD details, build notes, and what the project demonstrated here.",
+    "highlights": [
+      "Placeholder highlight for CAD modeling work",
+      "Placeholder highlight for rover structure or mechanism design",
+      "Placeholder highlight for project outcome or skills developed"
+    ],
+    "tags": ["CAD", "Rover Design", "Mechanical Design", "Prototyping"],
+    "images": [
+      "images/2020_curiosity_replica/cad_picture.jpg",
+      "images/2020_curiosity_replica/curiosity_render_1.jpg",
+      "images/2020_curiosity_replica/curiosity_render_2.jpg",
+      "images/2020_curiosity_replica/curiosity_render_3.jpg"
+    ]
+  },
+  {
+    "name": "Robotic Arm Project",
+    "category": "Independent Engineering Projects",
+    "role": "Project Designer",
+    "org": "Personal Project",
+    "dates": "2021",
+    "award": null,
+    "description": "Placeholder description for this robotic arm project. Add the final project summary, actuator/control approach, mechanical design details, and testing notes here.",
+    "highlights": [
+      "Placeholder highlight for arm design and assembly",
+      "Placeholder highlight for circuitry, controls, or actuation",
+      "Placeholder highlight for testing and iteration"
+    ],
+    "tags": ["Robotics", "Mechanical Design", "Electronics", "CAD"],
+    "images": [
+      "images/2021_robotic_arm/actual_arm.jpg",
+      "images/2021_robotic_arm/arm_circuitry.jpg",
+      "images/2021_robotic_arm/arm_render_2.jpg",
+      "images/2021_robotic_arm/render.jpg"
+    ]
+  },
+  {
+    "name": "Pipsqueak Engine",
+    "category": "Mechanical Design & Manufacturing",
+    "role": "Project Machinist",
+    "org": "Brigham Young University",
+    "dates": "2023",
+    "award": null,
+    "description": "Placeholder description for this Pipsqueak engine project. Add the final project summary, machining process, tolerances, drawings, and final assembly notes here.",
+    "highlights": [
+      "Placeholder highlight for machining and fabrication",
+      "Placeholder highlight for drawings, process planning, or assembly",
+      "Placeholder highlight for completed engine results"
+    ],
+    "tags": ["Machining", "Manufacturing", "Technical Drawings", "Assembly"],
+    "images": [
+      "images/2023_pipsqueak_engine/completed_1.jpg",
+      "images/2023_pipsqueak_engine/completed_2.jpg",
+      "images/2023_pipsqueak_engine/drawing.png",
+      "images/2023_pipsqueak_engine/exploded_view.png",
+      "images/2023_pipsqueak_engine/process_sheet.png",
+      "images/2023_pipsqueak_engine/render_1.JPG",
+      "images/2023_pipsqueak_engine/render_2.JPG",
+      "images/2023_pipsqueak_engine/uprights.jpg"
+    ]
+  },
+  {
+    "name": "Camping Shovel Design",
+    "category": "Mechanical Design & Manufacturing",
+    "role": "Project Designer",
+    "org": "Brigham Young University",
+    "dates": "2024",
+    "award": null,
+    "description": "Placeholder description for this camping shovel project. Add the final project summary, design requirements, material/process choices, analysis, and final results here.",
+    "highlights": [
+      "Placeholder highlight for CAD and design work",
+      "Placeholder highlight for machining, heat treatment, or fabrication",
+      "Placeholder highlight for analysis, testing, or final performance"
+    ],
+    "tags": ["Product Design", "Machining", "Analysis", "Manufacturing"],
+    "images": [
+      "images/2024_camping_shovel/3_point_bend.png",
+      "images/2024_camping_shovel/cantilever.png",
+      "images/2024_camping_shovel/cutting_blade.png",
+      "images/2024_camping_shovel/milling_handle.png",
+      "images/2024_camping_shovel/quenching_blade_1.jpg",
+      "images/2024_camping_shovel/quenching_blade_2.png",
+      "images/2024_camping_shovel/results.png",
+      "images/2024_camping_shovel/sholve_completed.png",
+      "images/2024_camping_shovel/shovel_CAD.png",
+      "images/2024_camping_shovel/tempering_blade.jpg"
+    ]
+  },
+  {
+    "name": "ECEN Technician Fabrication Projects",
+    "category": "Rapid Prototyping & Fabrication",
+    "role": "ECEN Technician",
+    "org": "Brigham Young University",
+    "dates": "2024",
+    "award": null,
+    "description": "Placeholder description for these ECEN technician fabrication projects. Add the final summary of shop work, design support, fabrication tasks, and technical contributions here.",
+    "highlights": [
+      "Placeholder highlight for design support or fabrication work",
+      "Placeholder highlight for 3D printing, molding, electronics support, or shop tools",
+      "Placeholder highlight for completed fixtures, prototypes, or student support"
+    ],
+    "tags": ["Fabrication", "3D Printing", "Mold Making", "Technical Support"],
+    "images": [
+      "images/2024_ecen_technician/3d_printer_nozzle_holder.jpg",
+      "images/2024_ecen_technician/game_controller_back.jpg",
+      "images/2024_ecen_technician/game_controller_front.jpg",
+      "images/2024_ecen_technician/hilt.jpg",
+      "images/2024_ecen_technician/mold_making.jpg",
+      "images/2024_ecen_technician/old_vs_new_hilt.jpg",
+      "images/2024_ecen_technician/robot_arena.jpg",
+      "images/2024_ecen_technician/robot_arena_upright.jpg",
+      "images/2024_ecen_technician/test_box_back.jpg",
+      "images/2024_ecen_technician/test_box_front.jpg"
     ]
   },
   {
     "name": "Inflatable Robotic Truss — Automated Roller",
-    "category": "Robotics Research",
+    "category": "Robotics & Autonomous Systems",
     "role": "Compliant Mechanisms & Robotics Research Assistant",
     "org": "BYU Dept. of Mechanical Engineering",
     "dates": "June 2024 – Present",
@@ -53,114 +305,6 @@
       "images/2026_truss_robot/team_photo.jpg",
       "images/2026_truss_robot/truss_stowed.jpg",
       "images/2026_truss_robot/architecture_roller_motion.png"
-    ]
-  },
-  {
-    "name": "Pneumatic Continuum Serial Manipulators",
-    "category": "Robotics Research",
-    "role": "Robotics & Dynamics Research Assistant",
-    "org": "BYU Dept. of Mechanical Engineering",
-    "dates": "March 2022 – September 2023",
-    "award": null,
-    "description": "Engineered and assembled four pneumatic continuum serial manipulators for in-house dynamic modeling research. Performed tensile testing and stress–strain analysis to select spine materials across 12 continuum joints.",
-    "highlights": [
-      "Tensile testing across 12 continuum joints to optimize spine material selection",
-      "Assembled and integrated pneumatic joints for experimental validation"
-    ],
-    "tags": ["Soft Robotics", "Tensile Testing & Stress-Strain Analysis", "Pneumatic Actuation", "Dynamic Modeling", "Robot Assembly"],
-    "images": [
-      "images/2023_rad_arms/continuum_joints.jpg",
-      "images/2023_rad_arms/continuum_arm_config.jpg",
-      "images/2023_rad_arms/tensile_testing_joint_spine.jpg",
-      "images/2023_rad_arms/continuum_arm_render.png",
-      "images/2023_rad_arms/continuum_arm.jpg"
-    ]
-  },
-  {
-    "name": "BYU Mars Rover",
-    "category": "Competition Robot",
-    "role": "Mechanical Subsystem Team Leader",
-    "org": "BYU Mars Rover Team",
-    "dates": "September 2023 – June 2024",
-    "award": "3rd Place — 2024 International University Rover Challenge · 102 Universities",
-    "description": "Led two teams of six engineers to design and integrate the rover's wheel, serial manipulator, elevator, and antenna subsystems. Developed testing procedures that significantly reduced backlash and improved precision in the manipulator arm.",
-    "highlights": [
-      "3rd place overall among 102 universities worldwide",
-      "Highest score among all teams in two of four competition tasks",
-      "Quantified joint uncertainty and drove backlash reduction through structured testing"
-    ],
-    "tags": ["Subsystem Team Leadership", "Systems Integration", "Serial Manipulator Design", "Backlash Reduction", "Mechanical Design"],
-    "images": [
-      "images/2024_mars_rover/rover_and_mock_lander.jpg",
-      "images/2024_mars_rover/rover_heat_stroke.jpg",
-      "images/2024_mars_rover/team_award_3rd_place.jpg",
-      "images/2024_mars_rover/rover_practice.jpg",
-      "images/2024_mars_rover/wheel_with_quick_tread_attach_system.jpg",
-      "images/2024_mars_rover/robotic_arm.jpg",
-      "images/2024_mars_rover/elevator_adapter_plate.jpg"
-    ]
-  },
-  {
-    "name": "Goal Convergence & Obstacle Avoidance — Kuka LBR Arm",
-    "category": "Robotics Coursework",
-    "role": "ME EN 537: Robotics — BYU",
-    "org": "Brigham Young University",
-    "dates": "September – December 2023",
-    "award": null,
-    "description": "Built a complete Python kinematics library for a 7-DOF Kuka LBR arm including DH parameterization, forward/inverse kinematics, Jacobian computation, and a potential field obstacle avoidance algorithm for both static and dynamic obstacles.",
-    "highlights": [
-      "Implemented Denavit–Hartenberg parameterization for 7-DOF arm",
-      "Potential field methods applied at joints and along links for obstacle avoidance",
-      "Generated linear, circular, and spiral dynamic obstacle trajectories for testing"
-    ],
-    "tags": ["Python", "Forward & Inverse Kinematics", "Jacobian Computation", "Potential Field Obstacle Avoidance", "7-DOF Arm"],
-    "images": []
-  },
-  {
-    "name": "Autonomous Ball Scoring Competition Robot",
-    "category": "Mechatronics Coursework",
-    "role": "ME EN 330: Design of Mechatronic Systems — BYU",
-    "org": "Brigham Young University",
-    "dates": "January – April 2022",
-    "award": "Highest Score — 2022 ME EN 330 Design Competition · 20 Teams",
-    "description": "Designed and built an autonomous mechatronic robot to collect, sort, and score black and white ping-pong balls into dynamically changing targets — achieving 29/30 shots and the highest competition score among 20 teams.",
-    "highlights": [
-      "29/30 successful shots; highest score among 20 competing teams",
-      "Flywheel shooting system with color-based servo-actuated ball selection",
-      "PIC24 microcontroller in C: line following, sensor fusion, autonomous navigation",
-      "Laser-cut & heat-formed acrylic electronics enclosure"
-    ],
-    "tags": ["Mechatronics", "Embedded C / PIC24 Microcontroller", "Flywheel Mechanism Design", "Laser Cutting & Fabrication", "Autonomous Navigation & Sensor Fusion"],
-    "images": [
-      "images/2022_ball_scoring_robot/storing_system.png",
-      "images/2022_ball_scoring_robot/bottom.png",
-      "images/2022_ball_scoring_robot/launching_system.png",
-      "images/2022_ball_scoring_robot/completed_robot.png",
-      "images/2022_ball_scoring_robot/render_front.png"
-    ]
-  },
-  {
-    "name": "Personalized Ski Design Optimization Tool",
-    "category": "Software & Optimization",
-    "role": "ME EN 575: Optimization Techniques — BYU",
-    "org": "Brigham Young University",
-    "dates": "March – April 2025",
-    "award": null,
-    "description": "A Python optimization framework that generates custom, lightweight ski geometries from user-specific inputs (height, weight, riding style). Integrated a live Onshape CAD model via API to update geometry and retrieve mass at each iteration.",
-    "highlights": [
-      "~30% mass reduction vs. commercial skis while maintaining performance constraints",
-      "Live Onshape CAD integration via API — geometry updates at each optimizer step",
-      "SLSQP constrained optimization over length, waist width, camber, thickness"
-    ],
-    "tags": ["Python", "SLSQP Constrained Optimization", "Onshape CAD API Integration", "Parametric Geometry Design", "Engineering Design Optimization"],
-    "images": [
-      "images/2025_ski_optimization/python_framework.png",
-      "images/2025_ski_optimization/optimization_framework.png",
-      "images/2025_ski_optimization/ski_optimization.gif",
-      "images/2025_ski_optimization/design_variables.png",
-      "images/2025_ski_optimization/results_2.png",
-      "images/2025_ski_optimization/results_1.png",
-      "images/2025_ski_optimization/onshape_api.png"
     ]
   }
 ]

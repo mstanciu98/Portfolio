@@ -18,6 +18,7 @@
       --accent:    #4d9de0;
       --accent2:   #e07b4d;
       --gold:      #c9a84c;
+      --text-pop:  0 1px 2px rgba(0,0,0,0.9);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -68,6 +69,7 @@
       font-size: 0.78rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
+      text-shadow: var(--text-pop);
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--white); }
@@ -85,11 +87,46 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(to bottom, rgba(27,27,27,0.3) 0%, rgba(27,27,27,0.85) 70%, var(--bg) 100%),
-        /* placeholder — replace src with your hero image */
-        url('images/hero.jpg') center/cover no-repeat;
       background-color: #0f0f0f;
+    }
+
+    .hero-track,
+    .hero-media {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-media {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 44%;
+      transform: translateX(100%);
+      transform-origin: center;
+      transition: transform 0.8s ease;
+    }
+
+    .hero-media.active {
+      transform: translateX(0);
+    }
+
+    .hero-media.leaving {
+      transform: translateX(-100%);
+    }
+
+    .hero-media iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      pointer-events: none;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(27,27,27,0.3) 0%, rgba(27,27,27,0.85) 70%, var(--bg) 100%);
+      pointer-events: none;
     }
 
     /* Animated grid overlay — pure CSS, Valve-industrial feel */
@@ -146,6 +183,7 @@
       font-weight: 300;
       color: var(--text);
       max-width: 560px;
+      text-shadow: var(--text-pop);
       opacity: 0;
       animation: fadeUp 0.8s 0.7s forwards;
     }
@@ -209,6 +247,7 @@
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--accent);
+      text-shadow: var(--text-pop);
     }
 
     .section-title {
@@ -248,10 +287,12 @@
       font-weight: 400;
       color: var(--text-dim);
       letter-spacing: 0.1em;
+      text-shadow: var(--text-pop);
     }
     .category-btn .chevron {
       font-size: 1.2rem;
       color: var(--text-dim);
+      text-shadow: var(--text-pop);
       transition: transform 0.3s;
     }
     .category-btn.open .chevron { transform: rotate(90deg); }
@@ -283,6 +324,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
       display: block;
       opacity: 0.85;
       transition: opacity 0.3s, transform 0.5s;
@@ -329,6 +371,7 @@
       font-size: 0.72rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
+      text-shadow: var(--text-pop);
       cursor: pointer;
       transition: background 0.2s;
     }
@@ -360,6 +403,7 @@
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 8px;
+      text-shadow: var(--text-pop);
     }
 
     .project-name {
@@ -375,6 +419,7 @@
       color: var(--text-dim);
       margin-bottom: 20px;
       letter-spacing: 0.06em;
+      text-shadow: var(--text-pop);
     }
 
     .project-desc {
@@ -391,10 +436,11 @@
     }
     .project-highlights li {
       font-size: 0.82rem;
-      color: var(--text-dim);
+      color: #a8a8a8;
       padding: 4px 0 4px 16px;
       position: relative;
       line-height: 1.5;
+      text-shadow: var(--text-pop);
     }
     .project-highlights li::before {
       content: '▸';
@@ -418,7 +464,10 @@
       font-size: 0.65rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--text-dim);
+      color: #b2b2b2;
+      background: rgba(0,0,0,0.14);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.28);
+      text-shadow: var(--text-pop);
     }
 
     .award-badge {
@@ -499,6 +548,7 @@
     .carousel-stage {
       position: relative;
       min-height: 320px;
+      max-height: 64vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -508,8 +558,24 @@
 
     .carousel-image {
       max-width: 100%;
-      max-height: 72vh;
+      max-height: 64vh;
       object-fit: contain;
+      display: block;
+    }
+
+    #carousel-media {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      max-height: 64vh;
+      border: 0;
       display: block;
     }
 
@@ -522,15 +588,82 @@
     .carousel-next { right: 16px; }
 
     .carousel-footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 12px 20px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px 20px;
+      padding: 12px 20px 16px;
       border-top: 1px solid var(--line);
       color: var(--text-dim);
       font-size: 0.72rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
+      text-shadow: var(--text-pop);
+    }
+
+    .carousel-description {
+      grid-column: 1 / -1;
+      color: var(--text);
+      font-size: 0.86rem;
+      letter-spacing: 0;
+      line-height: 1.55;
+      text-transform: none;
+    }
+
+    .carousel-path {
+      justify-self: start;
+      overflow-wrap: anywhere;
+      text-align: left;
+    }
+
+    .carousel-count {
+      justify-self: end;
+      text-align: right;
+    }
+
+    .carousel-thumbs {
+      grid-column: 1 / -1;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-top: 6px;
+      scrollbar-width: thin;
+    }
+
+    .carousel-thumb {
+      width: 54px;
+      height: 42px;
+      flex: 0 0 auto;
+      padding: 0;
+      border: 1px solid var(--line);
+      background: #111;
+      cursor: pointer;
+      opacity: 0.58;
+      transition: width 0.2s, opacity 0.2s, border-color 0.2s;
+    }
+
+    .carousel-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .carousel-thumb-video {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      font-size: 1rem;
+      background:
+        linear-gradient(rgba(17,17,17,0.24), rgba(17,17,17,0.72)),
+        var(--bg3);
+    }
+
+    .carousel-thumb.active {
+      width: 84px;
+      opacity: 1;
+      border-color: var(--accent);
     }
 
     /* ─── ABOUT ─── */
@@ -572,6 +705,7 @@
       text-transform: uppercase;
       color: var(--text-dim);
       text-align: center;
+      text-shadow: var(--text-pop);
     }
 
     .about-text h3 {
@@ -599,12 +733,13 @@
     .skill-item {
       font-size: 0.75rem;
       letter-spacing: 0.08em;
-      color: var(--text-dim);
+      color: #a8a8a8;
       padding: 6px 0;
       border-bottom: 1px solid var(--line);
       display: flex;
       align-items: center;
       gap: 8px;
+      text-shadow: var(--text-pop);
     }
     .skill-item::before {
       content: '';
@@ -627,6 +762,7 @@
       font-weight: 300;
       color: var(--text);
       line-height: 1.8;
+      text-shadow: var(--text-pop);
     }
 
     .contact-links {
@@ -654,6 +790,7 @@
       text-transform: uppercase;
       color: var(--text-dim);
       display: block;
+      text-shadow: var(--text-pop);
     }
     .contact-link .cl-value {
       font-weight: 600;
@@ -670,9 +807,10 @@
       font-size: 0.72rem;
       color: var(--text-dim);
       letter-spacing: 0.08em;
+      text-shadow: var(--text-pop);
     }
 
-    footer a { color: var(--text-dim); text-decoration: none; }
+    footer a { color: var(--text-dim); text-decoration: none; text-shadow: var(--text-pop); }
     footer a:hover { color: var(--text); }
 
     /* ─── DIVIDER ─── */
@@ -700,6 +838,8 @@
       .carousel-btn { width: 36px; height: 36px; }
       .carousel-prev { left: 10px; }
       .carousel-next { right: 10px; }
+      .carousel-footer { grid-template-columns: 1fr; }
+      .carousel-count { justify-self: start; text-align: left; }
       footer { flex-direction: column; gap: 12px; text-align: center; }
     }
 
@@ -716,19 +856,14 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
-    <!-- Add: <li><a href="resume.pdf" target="_blank">Résumé</a></li> -->
+    <li><a href="Mihai%20Stanciu%20Resume%201.pdf" target="_blank" download>Resume</a></li>
   </ul>
 </nav>
 
 <!-- ═══ HERO ═══ -->
 <div id="top" class="hero">
   <div class="hero-bg">
-    <!--
-      HOW TO ADD A HERO IMAGE:
-      1. Place your image in an "images/" folder next to this file
-      2. The CSS background-image in .hero-bg already points to "images/hero.jpg"
-      3. Update that path if your filename differs
-    -->
+    <div class="hero-track" id="hero-track"></div>
   </div>
   <div class="hero-grid"></div>
   <div class="hero-content">
@@ -771,14 +906,7 @@
   </div>
   <div class="about-grid">
     <div class="about-photo">
-      <!--
-        ADD YOUR PHOTO HERE:
-        Replace the placeholder below with:
-        <img src="images/mihai.jpg" alt="Mihai Stanciu">
-      -->
-      <div class="about-photo-placeholder">
-        <span>Add photo:<br>images/mihai.jpg</span>
-      </div>
+        <img src="images/me/forrest_gump.jpg" alt="Mihai Stanciu">
     </div>
     <div class="about-text">
       <h3>Engineering at the intersection of mechanism, robotics, and manufacturing.</h3>
@@ -834,22 +962,16 @@
       <a class="contact-link" href="mailto:your@email.com">
         <div>
           <span class="cl-label">Email</span>
-          <span class="cl-value">your@email.com</span>
+          <span class="cl-value">stanciumihai3@gmail.com</span>
         </div>
       </a>
-      <a class="contact-link" href="https://www.linkedin.com/in/yourprofile" target="_blank">
+      <a class="contact-link" href="https://www.linkedin.com/in/mihai-stanciu/" target="_blank">
         <div>
           <span class="cl-label">LinkedIn</span>
-          <span class="cl-value">linkedin.com/in/yourprofile</span>
+          <span class="cl-value">linkedin.com/in/mihai-stanciu</span>
         </div>
       </a>
-      <a class="contact-link" href="https://github.com/yourusername" target="_blank">
-        <div>
-          <span class="cl-label">GitHub</span>
-          <span class="cl-value">github.com/yourusername</span>
-        </div>
-      </a>
-      <a class="contact-link" href="resume.pdf" target="_blank">
+      <a class="contact-link" href="Mihai%20Stanciu%20Resume%201.pdf" target="_blank" download>
         <div>
           <span class="cl-label">Résumé</span>
           <span class="cl-value">Download PDF</span>
@@ -875,13 +997,15 @@
       <button class="modal-close" type="button" aria-label="Close image carousel">&times;</button>
     </div>
     <div class="carousel-stage">
-      <button class="carousel-btn carousel-prev" type="button" aria-label="Previous image">&lsaquo;</button>
-      <img class="carousel-image" id="carousel-image" src="" alt="">
-      <button class="carousel-btn carousel-next" type="button" aria-label="Next image">&rsaquo;</button>
+      <button class="carousel-btn carousel-prev" type="button" aria-label="Previous carousel item">&lsaquo;</button>
+      <div id="carousel-media"></div>
+      <button class="carousel-btn carousel-next" type="button" aria-label="Next carousel item">&rsaquo;</button>
     </div>
     <div class="carousel-footer">
-      <span id="carousel-count"></span>
-      <span id="carousel-path"></span>
+      <span class="carousel-path" id="carousel-path"></span>
+      <span class="carousel-count" id="carousel-count"></span>
+      <p class="carousel-description" id="carousel-description"></p>
+      <div class="carousel-thumbs" id="carousel-thumbs" aria-label="Image thumbnails"></div>
     </div>
   </div>
 </div>
@@ -906,10 +1030,25 @@
 
   let projectItems = [];
   const carouselState = {
-    images: [],
+    media: [],
     projectName: '',
     currentIndex: 0
   };
+  const heroMedia = [
+    {
+      type: 'image',
+      src: 'images/2026_truss_robot/me_and_robot.JPG',
+      position: 'center 44%'
+    },
+    // { type: 'video', url: 'https://www.youtube.com/watch?v=ANe_HW4X8oc', duration: 20 }
+    // { type: 'image', src: 'images/2026_truss_robot/team_photo.jpg', position: 'center' },
+    /*
+      Add more hero media here. Examples:
+      { type: 'image', src: 'images/2026_truss_robot/team_photo.jpg', position: 'center' },
+      { type: 'video', src: 'images/2026_truss_robot/robot_running.mp4' },
+      { type: 'video', url: 'https://www.youtube.com/watch?v=ANe_HW4X8oc', duration: 12 }
+    */
+  ];
 
   function escapeHTML(value) {
     return String(value ?? '')
@@ -932,24 +1071,232 @@
     `;
   }
 
-  function projectImages(item) {
-    return Array.isArray(item.images) ? item.images : [item.image].filter(Boolean);
+  function youtubeVideoId(url) {
+    if (!url) return '';
+
+    try {
+      const parsed = new URL(url);
+
+      if (parsed.hostname.includes('youtu.be')) {
+        return parsed.pathname.split('/').filter(Boolean)[0] || '';
+      }
+
+      if (parsed.hostname.includes('youtube.com')) {
+        if (parsed.pathname.startsWith('/embed/')) {
+          return parsed.pathname.split('/').filter(Boolean)[1] || '';
+        }
+
+        if (parsed.pathname.startsWith('/shorts/')) {
+          return parsed.pathname.split('/').filter(Boolean)[1] || '';
+        }
+
+        return parsed.searchParams.get('v') || '';
+      }
+
+      return '';
+    } catch {
+      return '';
+    }
+  }
+
+  function youtubeEmbedURL(url) {
+    const videoId = youtubeVideoId(url);
+    return videoId ? `https://www.youtube.com/embed/${videoId}` : '';
+  }
+
+  function normalizeHeroMedia(media) {
+    const rawURL = typeof media === 'string'
+      ? media
+      : media.src || media.url || media.video || media.youtube || '';
+    const youtubeId = youtubeVideoId(rawURL);
+    const isVideoFile = /\.(mp4|webm|ogg)$/i.test(rawURL.split('?')[0]);
+    const type = typeof media === 'object' && media.type
+      ? media.type
+      : (youtubeId || isVideoFile ? 'video' : 'image');
+
+    return {
+      type,
+      src: rawURL,
+      youtubeId,
+      position: typeof media === 'object' && media.position ? media.position : 'center 44%',
+      duration: typeof media === 'object' && Number(media.duration) > 0 ? Number(media.duration) : null
+    };
+  }
+
+  function heroMediaElement(media, shouldLoop = false) {
+    if (media.youtubeId) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'hero-media youtube';
+      wrapper.innerHTML = `
+        <iframe
+          src="https://www.youtube.com/embed/${escapeHTML(media.youtubeId)}?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&iv_load_policy=3&playsinline=1&loop=${shouldLoop ? '1' : '0'}${shouldLoop ? `&playlist=${escapeHTML(media.youtubeId)}` : ''}&modestbranding=1&rel=0"
+          title="Hero background video"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          aria-hidden="true"
+          tabindex="-1"
+        ></iframe>
+      `;
+      return wrapper;
+    }
+
+    if (media.type === 'video') {
+      const video = document.createElement('video');
+      video.className = 'hero-media';
+      video.src = media.src;
+      video.autoplay = true;
+      video.muted = true;
+      video.loop = shouldLoop;
+      video.controls = false;
+      video.playsInline = true;
+      video.setAttribute('aria-hidden', 'true');
+      video.style.objectPosition = media.position;
+      return video;
+    }
+
+    const image = document.createElement('img');
+    image.className = 'hero-media';
+    image.src = media.src;
+    image.alt = '';
+    image.setAttribute('aria-hidden', 'true');
+    image.style.objectPosition = media.position;
+    return image;
+  }
+
+  function initHeroMedia() {
+    const track = document.getElementById('hero-track');
+    const mediaList = heroMedia.map(normalizeHeroMedia).filter(media => media.src);
+    if (!track || !mediaList.length) return;
+
+    let currentIndex = 0;
+    const shouldLoopSingleVideo = mediaList.length === 1 && mediaList[currentIndex].type === 'video';
+    let currentElement = heroMediaElement(mediaList[currentIndex], shouldLoopSingleVideo);
+    let prepareTimer = null;
+    let transitionTimer = null;
+    track.appendChild(currentElement);
+    currentElement.offsetWidth;
+
+    if (mediaList[currentIndex].type === 'video') {
+      transitionTimer = setTimeout(() => {
+        currentElement.classList.add('active');
+        scheduleNext(mediaList[currentIndex], currentElement);
+      }, 5000);
+    } else {
+      currentElement.classList.add('active');
+      scheduleNext(mediaList[currentIndex], currentElement);
+    }
+
+    function mediaDelay(media, element) {
+      if (media.type !== 'video') return 5000;
+      if (media.duration) return media.duration * 1000;
+      if (element instanceof HTMLVideoElement && Number.isFinite(element.duration) && element.duration > 0) {
+        return element.duration * 1000;
+      }
+      return 5000;
+    }
+
+    function scheduleNext(media, element) {
+      if (mediaList.length === 1) return;
+
+      clearTimeout(prepareTimer);
+      clearTimeout(transitionTimer);
+
+      if (element instanceof HTMLVideoElement && media.type === 'video' && !media.duration) {
+        element.onended = () => prepareNext(0);
+        element.onloadedmetadata = () => {
+          scheduleNext(media, element);
+        };
+      }
+
+      const delay = mediaDelay(media, element);
+      const nextMedia = mediaList[(currentIndex + 1) % mediaList.length];
+      const leadTime = nextMedia.type === 'video' ? Math.min(5000, Math.max(0, delay - 100)) : 0;
+      prepareTimer = setTimeout(() => prepareNext(leadTime), delay - leadTime);
+    }
+
+    function prepareNext(leadTime = 0) {
+      clearTimeout(prepareTimer);
+      clearTimeout(transitionTimer);
+      const previousElement = currentElement;
+      if (previousElement instanceof HTMLVideoElement) {
+        previousElement.onended = null;
+        previousElement.onloadedmetadata = null;
+      }
+      const nextIndex = (currentIndex + 1) % mediaList.length;
+      const nextElement = heroMediaElement(mediaList[nextIndex]);
+      track.appendChild(nextElement);
+      nextElement.offsetWidth;
+
+      transitionTimer = setTimeout(() => {
+        currentIndex = nextIndex;
+        currentElement = nextElement;
+        previousElement.classList.remove('active');
+        previousElement.classList.add('leaving');
+        currentElement.classList.add('active');
+        setTimeout(() => previousElement.remove(), 900);
+        scheduleNext(mediaList[currentIndex], currentElement);
+      }, leadTime);
+    }
+
+  }
+
+  function mediaEntries(item) {
+    const rawImages = Array.isArray(item.images) ? item.images : [item.image].filter(Boolean);
+    return rawImages
+      .map((media, index) => {
+        if (media && typeof media === 'object') {
+          const rawURL = media.src || media.path || media.url || media.video || media.youtube || '';
+          const embedURL = youtubeEmbedURL(rawURL);
+
+          return {
+            type: media.type || (embedURL ? 'video' : 'image'),
+            src: rawURL,
+            embedSrc: embedURL,
+            thumbnail: media.thumbnail || '',
+            description: media.description || media.caption || ''
+          };
+        }
+
+        const description = item.imageDescriptions
+          ? item.imageDescriptions[media] || item.imageDescriptions[index] || ''
+          : '';
+        const embedURL = youtubeEmbedURL(media);
+
+        return {
+          type: embedURL ? 'video' : 'image',
+          src: media,
+          embedSrc: embedURL,
+          thumbnail: '',
+          description
+        };
+      })
+      .filter(media => media.src && (media.type !== 'video' || media.embedSrc));
+  }
+
+  function projectCoverPosition(item) {
+    if (item.imagePosition) return item.imagePosition;
+    return item.name && item.name.toLowerCase().includes('handhold') ? 'right center' : 'center';
   }
 
   function projectCoverMarkup(item, index) {
-    const images = projectImages(item);
+    const media = mediaEntries(item);
 
-    if (!images.length) {
+    if (!media.length) {
       return imagePlaceholder('images/project.jpg');
     }
 
-    const imageCount = images.length === 1 ? '1 image' : `${images.length} images`;
+    const imageCount = media.length === 1 ? '1 item' : `${media.length} items`;
+    const coverPosition = projectCoverPosition(item);
+    const cover = media[0];
+    const coverImage = cover.type === 'video'
+      ? cover.thumbnail || `https://img.youtube.com/vi/${cover.embedSrc.split('/').pop()}/hqdefault.jpg`
+      : cover.src;
 
     return `
       <button class="project-image-button" type="button" data-project-index="${index}" aria-label="Open image carousel for ${escapeHTML(item.name)}">
         <img
-          src="${escapeHTML(images[0])}"
+          src="${escapeHTML(coverImage)}"
           alt="${escapeHTML(item.name)}"
+          style="object-position: ${escapeHTML(coverPosition)}"
           onerror="this.onerror=null; this.parentElement.replaceWith(document.createRange().createContextualFragment(imagePlaceholder(this.getAttribute('src'))))"
         >
         <span class="project-image-count">${imageCount}</span>
@@ -1024,29 +1371,44 @@
 
   function updateCarousel() {
     const modalTitle = document.getElementById('modal-title');
-    const carouselImage = document.getElementById('carousel-image');
+    const carouselMedia = document.getElementById('carousel-media');
     const carouselCount = document.getElementById('carousel-count');
     const carouselPath = document.getElementById('carousel-path');
+    const carouselDescription = document.getElementById('carousel-description');
+    const carouselThumbs = document.getElementById('carousel-thumbs');
     const prevBtn = document.querySelector('.carousel-prev');
     const nextBtn = document.querySelector('.carousel-next');
-    const imagePath = carouselState.images[carouselState.currentIndex];
+    const media = carouselState.media[carouselState.currentIndex];
 
     modalTitle.textContent = carouselState.projectName;
-    carouselImage.src = imagePath;
-    carouselImage.alt = `${carouselState.projectName} image ${carouselState.currentIndex + 1}`;
-    carouselCount.textContent = `${carouselState.currentIndex + 1} / ${carouselState.images.length}`;
-    carouselPath.textContent = imagePath;
-    prevBtn.style.display = carouselState.images.length > 1 ? 'inline-flex' : 'none';
-    nextBtn.style.display = carouselState.images.length > 1 ? 'inline-flex' : 'none';
+    carouselMedia.innerHTML = media.type === 'video'
+      ? `<iframe class="carousel-video" src="${escapeHTML(media.embedSrc)}" title="${escapeHTML(carouselState.projectName)} video ${carouselState.currentIndex + 1}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+      : `<img class="carousel-image" src="${escapeHTML(media.src)}" alt="${escapeHTML(carouselState.projectName)} image ${carouselState.currentIndex + 1}">`;
+    carouselCount.textContent = `${carouselState.currentIndex + 1} / ${carouselState.media.length}`;
+    carouselPath.textContent = media.src;
+    carouselDescription.textContent = media.description || 'Add a description for this item in items.json.';
+    prevBtn.style.display = carouselState.media.length > 1 ? 'inline-flex' : 'none';
+    nextBtn.style.display = carouselState.media.length > 1 ? 'inline-flex' : 'none';
+    carouselThumbs.innerHTML = carouselState.media.map((thumb, index) => {
+      const thumbImage = thumb.thumbnail || (thumb.type === 'video' ? `https://img.youtube.com/vi/${thumb.embedSrc.split('/').pop()}/mqdefault.jpg` : thumb.src);
+
+      return `
+      <button class="carousel-thumb ${index === carouselState.currentIndex ? 'active' : ''}" type="button" data-carousel-index="${index}" aria-label="View carousel item ${index + 1}">
+        ${thumb.type === 'video'
+          ? `<span class="carousel-thumb-video" style="background-image: linear-gradient(rgba(17,17,17,0.24), rgba(17,17,17,0.72)), url('${escapeHTML(thumbImage)}'); background-size: cover; background-position: center;">▶</span>`
+          : `<img src="${escapeHTML(thumb.src)}" alt="">`}
+      </button>
+    `;
+    }).join('');
   }
 
   function openImageModal(projectIndex) {
     const item = projectItems[projectIndex];
-    const images = item ? projectImages(item) : [];
+    const media = item ? mediaEntries(item) : [];
 
-    if (!images.length) return;
+    if (!media.length) return;
 
-    carouselState.images = images;
+    carouselState.media = media;
     carouselState.projectName = item.name;
     carouselState.currentIndex = 0;
     updateCarousel();
@@ -1059,14 +1421,16 @@
 
   function closeImageModal() {
     const modal = document.getElementById('image-modal');
+    const carouselMedia = document.getElementById('carousel-media');
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
+    carouselMedia.innerHTML = '';
     document.body.style.overflow = '';
   }
 
   function moveCarousel(direction) {
-    if (!carouselState.images.length) return;
-    carouselState.currentIndex = (carouselState.currentIndex + direction + carouselState.images.length) % carouselState.images.length;
+    if (!carouselState.media.length) return;
+    carouselState.currentIndex = (carouselState.currentIndex + direction + carouselState.media.length) % carouselState.media.length;
     updateCarousel();
   }
 
@@ -1092,6 +1456,13 @@
       return;
     }
 
+    const carouselThumb = event.target.closest('.carousel-thumb');
+    if (carouselThumb) {
+      carouselState.currentIndex = Number(carouselThumb.dataset.carouselIndex);
+      updateCarousel();
+      return;
+    }
+
     if (event.target.id === 'image-modal') {
       closeImageModal();
     }
@@ -1105,6 +1476,8 @@
     if (event.key === 'ArrowLeft') moveCarousel(-1);
     if (event.key === 'ArrowRight') moveCarousel(1);
   });
+
+  initHeroMedia();
 
   fetch('items.json')
     .then(response => {

@@ -165,3 +165,37 @@ The hero section uses `images/hero.jpg` as a background.
 
 Recommended: a high-contrast photo of a project, workspace, or engineering environment.
 Dimensions: at least 1920×1080px. The CSS overlay will darken it automatically.
+
+
+---
+
+## For Mihai's Eyes Only
+
+Private setup notes for getting the portfolio running locally.
+
+### 1. Install Git
+
+1. Go to [git-scm.com/install](https://git-scm.com/install/)
+2. Select your operating system.
+3. Download the standalone installer for your processor architecture.
+4. Open the installer.
+5. Use the default settings unless you know exactly what a setting changes.
+
+### 2. Clone the Portfolio
+
+Open a terminal, then navigate to the folder where you want the portfolio project to live.
+
+```bash
+git clone <paste-link-to-git-repo>
+cd Portfolio
+```
+
+### 3. Open in VS Code
+
+If the `code` command is available:
+
+```bash
+code .
+```
+
+If that command does not work, open VS Code manually and use **File → Open Folder** to select the `Portfolio` folder.
