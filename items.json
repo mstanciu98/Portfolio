@@ -1,310 +1,850 @@
-[
-  {
-    "name": "Handhold — Surgical Clip for Hand Surgery",
-    "category": "Medical Devices & Product Development",
-    "role": "Lead Design Engineer",
-    "org": "Provo, Utah",
-    "dates": "July 2025 – Present",
-    "award": "2026 BYU Student Innovator Finalist · $4,000 Award",
-    "description": "A surgical clip for finger stabilization and incision retraction that interfaces with the Lead Hand surgical positioning system. Designed to reduce operating time and required personnel during hand surgery — used in a live procedure at Spanish Fork Hospital.",
-    "highlights": [
-      "30+ prototypes refined through direct feedback from three hand surgeons",
-      "Met autoclave sterilization requirements for clinical use",
-      "Evaluated single-use vs. reusable variants based on market demand and margins",
-      "Finalist among 38 teams at the 2026 BYU Student Innovator of the Year competition"
-    ],
-    "tags": ["Medical Device Design", "Iterative Prototyping", "Autoclave Sterilization", "SOLIDWORKS", "Design for Manufacturing", "Clinical Validation"],
-    "images": [
-      {"src": "images/2026_handhold/sioy_competition.jpg", "description": "SIOY Competition Presentation"},
-      {"src": "images/2026_handhold/autoclave_prototype.jpg", "description": "Autoclave Prototype"},
-      {"src": "images/2026_handhold/handhold_surgery.jpg", "description": "Handhold Surgery"},
-      {"src": "images/2026_handhold/doctor_visit.jpg", "description": "Doctor Visit"},
-      {"src": "images/2026_handhold/handhold_design.png", "description": "Handhold Design"},
-      {"src": "images/2026_handhold/prototype_history.png", "description": "Prototype History"},
-      {"src": "images/2026_handhold/handhold_clip.png", "description": "Handhold Clip"},
-      {"src": "images/2026_handhold/aluminum_prototype.jpg", "description": "Aluminum Prototype"},
-      {"src": "images/2026_handhold/preliminary_mold_design_injection_molding.png", "description": "Preliminary Mold Design"},
-      {"type": "video", "url": "https://www.youtube.com/watch?v=ANe_HW4X8oc", "description": "Handhold demo video"}
-    ]
-  },
-  {
-    "name": "Pneumatic Continuum Serial Manipulators",
-    "category": "Robotics & Autonomous Systems",
-    "role": "Robotics & Dynamics Research Assistant",
-    "org": "BYU Dept. of Mechanical Engineering",
-    "dates": "March 2022 – September 2023",
-    "award": null,
-    "description": "Engineered and assembled four pneumatic continuum serial manipulators for in-house dynamic modeling research. Performed tensile testing and stress–strain analysis to select spine materials across 12 continuum joints.",
-    "highlights": [
-      "Tensile testing across 12 continuum joints to optimize spine material selection",
-      "Assembled and integrated pneumatic joints for experimental validation"
-    ],
-    "tags": ["Soft Robotics", "Tensile Testing & Stress-Strain Analysis", "Pneumatic Actuation", "Dynamic Modeling", "Robot Assembly"],
-    "images": [
-      "images/2023_rad_arms/continuum_joints.jpg",
-      "images/2023_rad_arms/continuum_arm_config.jpg",
-      "images/2023_rad_arms/tensile_testing_joint_spine.jpg",
-      "images/2023_rad_arms/continuum_arm_render.png",
-      "images/2023_rad_arms/continuum_arm.jpg"
-    ]
-  },
-  {
-    "name": "BYU Mars Rover",
-    "category": "Robotics & Autonomous Systems",
-    "role": "Mechanical Subsystem Team Leader",
-    "org": "BYU Mars Rover Team",
-    "dates": "September 2023 – June 2024",
-    "award": "3rd Place — 2024 International University Rover Challenge · 102 Universities",
-    "description": "Led two teams of six engineers to design and integrate the rover's wheel, serial manipulator, elevator, and antenna subsystems. Developed testing procedures that significantly reduced backlash and improved precision in the manipulator arm.",
-    "highlights": [
-      "3rd place overall among 102 universities worldwide",
-      "Highest score among all teams in two of four competition tasks",
-      "Quantified joint uncertainty and drove backlash reduction through structured testing"
-    ],
-    "tags": ["Subsystem Team Leadership", "Systems Integration", "Serial Manipulator Design", "Backlash Reduction", "Mechanical Design"],
-    "images": [
-      "images/2024_mars_rover/rover_and_mock_lander.jpg",
-      "images/2024_mars_rover/rover_heat_stroke.jpg",
-      "images/2024_mars_rover/team_award_3rd_place.jpg",
-      "images/2024_mars_rover/rover_practice.jpg",
-      "images/2024_mars_rover/wheel_with_quick_tread_attach_system.jpg",
-      "images/2024_mars_rover/robotic_arm.jpg",
-      "images/2024_mars_rover/elevator_adapter_plate.jpg"
-    ]
-  },
-  {
-    "name": "Goal Convergence & Obstacle Avoidance — Kuka LBR Arm",
-    "category": "Robotics & Autonomous Systems",
-    "role": "ME EN 537: Robotics — BYU",
-    "org": "Brigham Young University",
-    "dates": "September – December 2023",
-    "award": null,
-    "description": "Built a complete Python kinematics library for a 7-DOF Kuka LBR arm including DH parameterization, forward/inverse kinematics, Jacobian computation, and a potential field obstacle avoidance algorithm for both static and dynamic obstacles.",
-    "highlights": [
-      "Implemented Denavit–Hartenberg parameterization for 7-DOF arm",
-      "Potential field methods applied at joints and along links for obstacle avoidance",
-      "Generated linear, circular, and spiral dynamic obstacle trajectories for testing"
-    ],
-    "tags": ["Python", "Forward & Inverse Kinematics", "Jacobian Computation", "Potential Field Obstacle Avoidance", "7-DOF Arm"],
-    "images": []
-  },
-  {
-    "name": "Autonomous Ball Scoring Competition Robot",
-    "category": "Robotics & Autonomous Systems",
-    "role": "ME EN 330: Design of Mechatronic Systems — BYU",
-    "org": "Brigham Young University",
-    "dates": "January – April 2022",
-    "award": "Highest Score — 2022 ME EN 330 Design Competition · 20 Teams",
-    "description": "Designed and built an autonomous mechatronic robot to collect, sort, and score black and white ping-pong balls into dynamically changing targets — achieving 29/30 shots and the highest competition score among 20 teams.",
-    "highlights": [
-      "29/30 successful shots; highest score among 20 competing teams",
-      "Flywheel shooting system with color-based servo-actuated ball selection",
-      "PIC24 microcontroller in C: line following, sensor fusion, autonomous navigation",
-      "Laser-cut & heat-formed acrylic electronics enclosure"
-    ],
-    "tags": ["Mechatronics", "Embedded C / PIC24 Microcontroller", "Flywheel Mechanism Design", "Laser Cutting & Fabrication", "Autonomous Navigation & Sensor Fusion"],
-    "images": [
-      "images/2022_ball_scoring_robot/storing_system.png",
-      "images/2022_ball_scoring_robot/bottom.png",
-      "images/2022_ball_scoring_robot/launching_system.png",
-      "images/2022_ball_scoring_robot/completed_robot.png",
-      "images/2022_ball_scoring_robot/render_front.png"
-    ]
-  },
-  {
-    "name": "Personalized Ski Design Optimization Tool",
-    "category": "Engineering Software & Optimization",
-    "role": "ME EN 575: Optimization Techniques — BYU",
-    "org": "Brigham Young University",
-    "dates": "March – April 2025",
-    "award": null,
-    "description": "A Python optimization framework that generates custom, lightweight ski geometries from user-specific inputs (height, weight, riding style). Integrated a live Onshape CAD model via API to update geometry and retrieve mass at each iteration.",
-    "highlights": [
-      "~30% mass reduction vs. commercial skis while maintaining performance constraints",
-      "Live Onshape CAD integration via API — geometry updates at each optimizer step",
-      "SLSQP constrained optimization over length, waist width, camber, thickness"
-    ],
-    "tags": ["Python", "SLSQP Constrained Optimization", "Onshape CAD API Integration", "Parametric Geometry Design", "Engineering Design Optimization"],
-    "images": [
-      "images/2025_ski_optimization/python_framework.png",
-      "images/2025_ski_optimization/optimization_framework.png",
-      "images/2025_ski_optimization/ski_optimization.gif",
-      "images/2025_ski_optimization/design_variables.png",
-      "images/2025_ski_optimization/results_2.png",
-      "images/2025_ski_optimization/results_1.png",
-      "images/2025_ski_optimization/onshape_api.png"
-    ]
-  },
-  {
-    "name": "High-Power Rocketry Project",
-    "category": "Independent Engineering Projects",
-    "role": "Project Builder",
-    "org": "Personal Project",
-    "dates": "2019",
-    "award": null,
-    "description": "Placeholder description for this rocketry project. Add the final project summary, design goals, build process, and launch outcome here.",
-    "highlights": [
-      "Placeholder highlight for design and fabrication work",
-      "Placeholder highlight for testing, launch preparation, or results",
-      "Placeholder highlight for lessons learned or technical skills"
-    ],
-    "tags": ["Rocketry", "Fabrication", "Testing", "Design"],
-    "images": [
-      "images/2019_rocketry/fin_allignment.jpg",
-      "images/2019_rocketry/landing.jpg",
-      "images/2019_rocketry/lunchpad.jpg",
-      "images/2019_rocketry/me_and_rocket.jpg",
-      "images/2019_rocketry/rocket.jpg"
-    ]
-  },
-  {
-    "name": "Curiosity Rover Replica",
-    "category": "Independent Engineering Projects",
-    "role": "Project Designer",
-    "org": "Personal Project",
-    "dates": "2020",
-    "award": null,
-    "description": "Placeholder description for this Curiosity rover replica project. Add the final project summary, CAD details, build notes, and what the project demonstrated here.",
-    "highlights": [
-      "Placeholder highlight for CAD modeling work",
-      "Placeholder highlight for rover structure or mechanism design",
-      "Placeholder highlight for project outcome or skills developed"
-    ],
-    "tags": ["CAD", "Rover Design", "Mechanical Design", "Prototyping"],
-    "images": [
-      "images/2020_curiosity_replica/cad_picture.jpg",
-      "images/2020_curiosity_replica/curiosity_render_1.jpg",
-      "images/2020_curiosity_replica/curiosity_render_2.jpg",
-      "images/2020_curiosity_replica/curiosity_render_3.jpg"
-    ]
-  },
-  {
-    "name": "Robotic Arm Project",
-    "category": "Independent Engineering Projects",
-    "role": "Project Designer",
-    "org": "Personal Project",
-    "dates": "2021",
-    "award": null,
-    "description": "Placeholder description for this robotic arm project. Add the final project summary, actuator/control approach, mechanical design details, and testing notes here.",
-    "highlights": [
-      "Placeholder highlight for arm design and assembly",
-      "Placeholder highlight for circuitry, controls, or actuation",
-      "Placeholder highlight for testing and iteration"
-    ],
-    "tags": ["Robotics", "Mechanical Design", "Electronics", "CAD"],
-    "images": [
-      "images/2021_robotic_arm/actual_arm.jpg",
-      "images/2021_robotic_arm/arm_circuitry.jpg",
-      "images/2021_robotic_arm/arm_render_2.jpg",
-      "images/2021_robotic_arm/render.jpg"
-    ]
-  },
-  {
+﻿[
+    {
+        "name":  "Inflatable Robotic Truss",
+        "category":  "Robotics \u0026 Autonomous Systems",
+        "role":  "Compliant Mechanisms \u0026 Robotics - Graduate Research Assistant",
+        "org":  "BYU Dept. of Mechanical Engineering",
+        "dates":  "June 2024 – Present",
+        "award":  "Presented at NASA Big Idea Challenge Forum and LSIC, Las Vegas",
+        "description":  "As part of my masters degree, I redesigned the automated roller mechanism for an inflatable robotic truss, achieving dramatic weight and cost reductions while doubling structural strength. Engineered a multi-stage gear train using off-the-shelf components to improve torque and reliability.",
+        "highlights":  [
+                           "31% weight reduction, 51% cost savings, 2× structural strength",
+                           "Constructed 21 roller units with custom vise fixtures for precision machining",
+                           "Presented to NASA planetary scientists at 2024 Big Idea Challenge Forum \u0026 Lunar Surface Innovation Consortium (LSIC) in Las Vegas"
+                       ],
+        "tags":  [
+                     "CAD",
+                     "Multi-Stage Gear Train Design",
+                     "Precision Machining",
+                     "Structural Analysis",
+                     "NASA Research",
+                     "Space Robotics"
+                 ],
+        "images":  [
+                       {
+                           "src":  "images/2026_truss_robot/truss_robot.jpg",
+                           "title":  "Truss Robot",
+                           "description":  "The solar array configuration of the truss robot standing at 12 feet tall before testing."
+                       },
+                       {
+                           "type":  "video",
+                           "url":  "https://youtu.be/rt7Nf0F_agk",
+                           "title":  "Isoperimetric Truss Robot Demo",
+                           "description":  "This video showcases some of the motion and functionality of the isoperimetric truss robot."
+                       },
+                       {
+                           "src":  "images/2026_truss_robot/active_roller.png",
+                           "title":  "Active Roller",
+                           "description":  "The active roller robotic unit I designed, optimized, and constructed for the truss robot. This unit is responsible for morphing the geometry of the truss by rolling along the tubes and thus changing segment lengths."
+                       },
+                       {
+                           "src":  "images/2026_truss_robot/architecture_roller_motion.png",
+                           "title":  "Active Roller Architecture",
+                           "description":  "The architecture of the active roller mechanism showing the multi-stage gear train and how the motor torque is transmitted to the roller shafts."
+                       },
+                       {
+                           "src":  "images/2026_truss_robot/active_roller_exploded.png",
+                           "title":  "Active Roller Exploded View",
+                           "description":  "An exploded view of the active roller mechanism showing the components and how they fit together."
+                       },
+                       {
+                           "src":  "images/2026_truss_robot/passive_roller.png",
+                           "title":  "Passive Roller",
+                           "description":  "The passive roller is used to connect the two ends of each tube to form the triangles that make up the truss structure."
+                       },
+                       {
+                           "src":  "images/2026_truss_robot/truss_stowed.jpg",
+                           "title":  "Truss Stowed",
+                           "description":  "The truss can be stowed to a remarkably compact volume offering a stowed-to-deployed ratio of 1:18.3. This capability is critical for space applications where launch vehicle volume is limited and costly."
+                       },
+                       {
+                           "src":  "images/2026_truss_robot/me_and_robot_3.JPG",
+                           "title":  "Pressurizing The Truss",
+                           "description":  "This is me pressurizing the truss for testing. Because of its inflatable nature, the truss provides an exceptional strength-to-weight ratio that is, once again, ideal for space applications."
+                       },
+                       {
+                           "src":  "images/2026_truss_robot/testing_truss.jpg",
+                           "title":  "Testing Truss",
+                           "description":  "The truss had to be tested outside due to its large size."
+                       },
+                       {
+                           "src":  "images/2026_truss_robot/truss_team.jpg",
+                           "title":  "Truss Team",
+                           "description":  "Some of the guys in my lab along with our advisor."
+                       }
+                   ]
+    },
+    {
+        "name":  "BYU Mars Rover",
+        "category":  "Robotics \u0026 Autonomous Systems",
+        "role":  "Mechanical Subsystem Team Leader",
+        "org":  "BYU Mars Rover Team",
+        "dates":  "September 2023 – June 2024",
+        "award":  "3rd Place — 2024 International University Rover Challenge · 102 Universities",
+        "description":  "Led two teams of six engineers to design and integrate the rover\u0027s wheel, serial manipulator, elevator, and antenna subsystems. Developed testing procedures that significantly reduced backlash and improved precision in the manipulator arm.",
+        "highlights":  [
+                           "3rd place overall among 102 universities worldwide",
+                           "Highest score among all teams in Science and Equipment Servicing, two of four competition tasks",
+                           "Quantified joint uncertainty and drove backlash reduction through structured testing"
+                       ],
+        "tags":  [
+                     "Subsystem Team Leadership",
+                     "Systems Integration",
+                     "Serial Manipulator Design",
+                     "Backlash Reduction",
+                     "Mechanical Design"
+                 ],
+        "images":  [
+                       {
+                           "src":  "images/2024_mars_rover/rover_practice.jpg",
+                           "title":  "Mars rover practice in southern Utah",
+                           "description":  "BYU Mars Rover Team practicing in southern Utah to prepare for the competition, testing the rover's capabilities in a Mars-like environment with the mock lander visible in the background."
+                       },
+                       {
+                           "type":  "video",
+                           "url":  "https://www.youtube.com/watch?v=EA7o8R7zuKs",
+                           "title":  "BYU Mars Rover - System Acceptance Review 2024",
+                           "description":  "BYU Mars Rover Team's submission for the 2024 University Rover Challenge showcasing the rover's capabilities and design features in preparation for the competition."
+                       },
+                       {
+                           "src":  "images/2024_mars_rover/rover_and_mock_lander.jpg",
+                           "title":  "Rover And Mock Lander",
+                           "description":  "Building the mock lander allowed us to practice the equipment servicing task many times such that we scored 95/100, the highest score among all teams."
+                       },
+                       {
+                           "src":  "images/2024_mars_rover/rover_heat_stroke.jpg",
+                           "title":  "Rover Heat Stroke",
+                           "description":  "Cooling off the rover after a long day of testing in the hot Utah sun. We had to be careful to prevent heat stroke for both the team and the rover during the competition sessions."
+                       },
+                       {
+                           "src":  "images/2024_mars_rover/team_award_3rd_place.jpg",
+                           "title":  "Team Award 3Rd Place",
+                           "description":  "The BYU Mars Rover Team receiving the 3rd place award at the 2024 International University Rover Challenge hosted at the Mars Desert Research Station in southern Utah. We were honored to be recognized among 102 universities worldwide for our hard work and dedication to the project."
+                       },
+                       {
+                           "src":  "images/2024_mars_rover/wheel_with_quick_tread_attach_system.jpg",
+                           "title":  "Wheel With Quick Tread Attach System",
+                           "description":  "A quick tread attachment system I designed for the rover's wheels that allowed us to easily swap out worn tread for testing and the competition."
+                       },
+                      {
+                           "src":  "images/2024_mars_rover/elevator_adapter_plate.jpg",
+                           "title":  "Elevator Adapter Plate",
+                           "description":  "An adapter plate that I designed and machined at a precise angleto account for the sag in the arm and to lift it such that the arm can move the payload into the mock lander drawer. This task was not possible in previous years because of the sag."
+                       },
+                       {
+                           "src":  "images/2024_mars_rover/robotic_arm.jpg",
+                           "title":  "Leveled Robotic Arm",
+                           "description":  "The leveled robotic arm shown after we attached the adapter plate."
+                       }
+                   ]
+    },
+    {
+        "name":  "Pneumatic Continuum Serial Manipulators",
+        "category":  "Robotics \u0026 Autonomous Systems",
+        "role":  "Robotics \u0026 Dynamics - Undergraduate Research Assistant",
+        "org":  "BYU Dept. of Mechanical Engineering",
+        "dates":  "March 2022 – September 2023",
+        "award":  null,
+        "description":  "Engineered and assembled four pneumatic continuum serial manipulators for soft robotics modeling research. Performed tensile testing and stress–strain analysis to select spine materials across 12 continuum joints.",
+        "highlights":  [
+                           "Performed tensile testing and stress–strain analysis to select the optimal material and construction for the spine of 12 continuum joints",
+                           "Assembled and integrated pneumatic joints for experimental validation of 4 continuum arms"
+                       ],
+        "tags":  [
+                     "Soft Robotics",
+                     "Tensile Testing \u0026 Stress-Strain Analysis",
+                     "Pneumatic Actuation",
+                     "Dynamic Modeling",
+                     "Robot Assembly"
+                 ],
+        "images":  [
+                       {
+                           "src":  "images/2023_rad_arms/continuum_arm_config.jpg",
+                           "title":  "Continuum Arm",
+                           "description":  "Continuum arms are a type of soft robotic manipulator that can bend and flex in multiple directions due to pneumatic actuation in accordion-like bellows elements."
+                       },
+                       {
+                           "type":  "video",
+                           "url":  "https://youtu.be/raL8VIDaruU",
+                           "title":  "Continuum Arm Demo",
+                           "description":  "In this video, the arm is controlled by adjusting the pressures in each of the bellows elements, however, a more robust controller was eventually implemented for precise motion."
+                       },
+                       {
+                           "src":  "images/2023_rad_arms/continuum_joints.jpg",
+                           "title":  "Continuum Joints",
+                           "description":  "Three (tip, mid, and base) continuum joints of the twelve that I assembled."
+                       },
+                       {
+                           "src":  "images/2023_rad_arms/tensile_testing_joint_spine.jpg",
+                           "title":  "Tensile Testing Joint Spine",
+                           "description":  "The fixturing method for tensile testing the final spine design."
+                       },
+                       {
+                           "src":  "images/2023_rad_arms/continuum_arm_render.png",
+                           "title":  "Continuum Arm Render",
+                           "description":  "Render of the complete continuum CAD arm assembly that I helped with."
+                       },
+                       {
+                           "src":  "images/2023_rad_arms/continuum_arm.jpg",
+                           "title":  "Continuum Arm and I",
+                           "description":  "Me with one of the assembled continuum arms. The arm is approximately 4 feet long."
+                       }
+                   ]
+    },
+    {
+        "name":  "Autonomous Ball Scoring Competition Robot",
+        "category":  "Robotics \u0026 Autonomous Systems",
+        "role":  "Lead Mechanical Design Engineer",
+        "org":  "Brigham Young University",
+        "dates":  "January – April 2022",
+        "award":  "Highest Score — 2022 Mechatronics Design Competition · 20 Teams",
+        "description":  "Designed and built an autonomous mechatronic robot to collect, sort, and score black and white ping-pong balls into dynamically changing targets — achieving 28/29 shots and the highest competition score among 20 teams.",
+        "highlights":  [
+                           "28/29 successful shots; highest score among 20 competing teams",
+                           "Flywheel shooting system with color-based servo-actuated ball selection",
+                           "PIC24 microcontroller in C: line following, sensor fusion, autonomous navigation",
+                           "Laser-cut \u0026 heat-formed acrylic electronics enclosure"
+                       ],
+        "tags":  [
+                     "Mechatronics",
+                     "Embedded C / PIC24 Microcontroller",
+                     "Flywheel Mechanism Design",
+                     "Laser Cutting \u0026 Fabrication",
+                     "Autonomous Navigation \u0026 Sensor Fusion"
+                 ],
+        "images":  [
+                       {
+                           "src":  "images/2022_ball_scoring_robot/completed_robot.png",
+                           "title":  "Final Design of the Robot",
+                           "description":  "Our robot features a funnel and gravity fed system to collect, store, and feed the balls. A color sensor is used to determine the color of the ball and a servo-actuated gate directs the ball to the flywheel which propels it along a precisely angled ramp to shoot it into the appropriate goals. Additionally, the robot uses line following for navigation."
+                       },
+                       {
+                           "type":  "video",
+                           "url":  "https://youtu.be/DWpTjgfFKEY",
+                           "title":  "Our Robot Performing In The Competition",
+                           "description":  "The robot was required to collect and store white and black ping pong balls by disrupting the green laser and shoot them into goals that randomly changed which ball color they would accept throughout the match. Our team scored 28 out of 29 balls, achieving the highest score among 20 teams."
+                       },
+                       {
+                           "src":  "images/2022_ball_scoring_robot/storing_system.png",
+                           "title":  "Storing and Collection System",
+                           "description":  "This shows the funnel and gravity fed system I designed to collect exaclty 4 balls as per competition requirements. Any additional balls would fall right out of the system to prevent loss of points."
+                       },
+                       {
+                           "src":  "images/2022_ball_scoring_robot/bottom.png",
+                           "title":  "Protective Case",
+                           "description":  "The enclosure I designed and manufactured using laser cutting and heat forming to protect the electronics and provide wire management. This is one of the very few robots that implemented such a protection feature."
+                       },
+                       {
+                           "src":  "images/2022_ball_scoring_robot/launching_system.png",
+                           "title":  "Launching System",
+                           "description":  "This is the servo-actuated gate that I created to feed the balls into the flywheel."
+                       },
+                       {
+                           "src":  "images/2022_ball_scoring_robot/render_front.png",
+                           "title":  "Robot Render",
+                           "description":  "A frontal view of the complete robot CAD model."
+                       }
+                   ]
+    },
+    {
+        "name":  "Handhold — Surgical Clip for Hand Surgery",
+        "category":  "Product Development",
+        "role":  "Lead Design Engineer",
+        "org":  "Handhold",
+        "dates":  "July 2025 – Present",
+        "award":  "2026 BYU Student Innovator Finalist · $4,000 Award",
+        "imagePosition":  "left center",
+        "description":  "A surgical clip for finger stabilization and incision retraction that interfaces with the \"Lead Hand\" surgical positioning system. Designed to reduce operating time and required personnel during hand surgery.",
+        "highlights":  [
+                         "Used in a live hand surgery procedure at Spanish Fork Hospital",
+                           "30+ prototypes refined through direct feedback from five hand surgeons",
+                           "Met autoclave sterilization requirements for clinical use",
+                           "Evaluated single-use vs. reusable variants based on market demand and margins",
+                           "Finalist among 38 teams at the 2026 BYU Student Innovator of the Year competition"
+                       ],
+        "tags":  [
+                     "Medical Device Design",
+                     "Iterative Prototyping",
+                     "Autoclave Sterilization",
+                     "SOLIDWORKS",
+                     "Design for Manufacturing",
+                     "Clinical Validation"
+                 ],
+        "images":  [
+                        {
+                           "src":  "images/2026_handhold/handhold_surgery.jpg",
+                           "title":  "Handhold Surgery",
+                           "description":  "This shows the Handhold clip securing two fingers during a trial live surgery procedure at the Spanish Fork Hospital. The clip successfully fixtured the two fingers during the entire procedure, preventing movement and refixturing that would require precious time and effort from the surgical team. This trial shows the clinical viability of the Handhold clip and provided invaluable feedback for further design iterations."
+                       },
+                       {
+                           "src":  "images/2026_handhold/sioy_competition.jpg",
+                           "title":  "SIOY Competition Presentation",
+                           "description":  "The Handhold team presenting at the 2026 BYU Student Innovator of the Year competition where we were finalists among 38 teams. This was a great opportunity to share our work with the BYU community and receive feedback from judges and attendees."
+                       },
+                       {
+                           "src":  "images/2026_handhold/handhold_design.png",
+                           "title":  "Handhold Design and Functionality",
+                           "description":  "This graphic I created illustrates the design and functionality of the Handhold clip. The clip is designed to be attached to the \"Lead Hand\" using a precision friction fit. An elastic band is then used to secure the finghers and standard surgical retractors can be attached to the clip to provide incision retraction."
+                       },
+                       {
+                           "src":  "images/2026_handhold/handhold_clip.png",
+                           "title":  "Handhold Clip",
+                           "description":  "A simple plastic prototype of the Handhold clip. Although this prototype is 3D printed, the final design will be injection molded out of Polypropylene to meet the strength, flexibility, and sterilization requirements for clinical use."
+                       },
+                       {
+                           "src":  "images/2026_handhold/aluminum_prototype.jpg",
+                           "title":  "Aluminum Prototype",
+                           "description":  "This is an aluminum prototype I manufactured to enable one of our collaborating surgeons to properly sterilize the clip in an autoclave and use it in a trial surgery procedure."
+                       },
+                       {
+                           "src":  "images/2026_handhold/autoclave_prototype.jpg",
+                           "title":  "Autoclave Prototype",
+                           "description":  "The clip being sterilized in an autoclave at the hospital."
+                       },
+                       {
+                           "src":  "images/2026_handhold/doctor_visit.jpg",
+                           "title":  "Doctor Visit",
+                           "description":  "One of the hand surgeons we collaborated with visiting our lab to test prototypes and provide feedback on the design. This direct collaboration with surgeons was critical for the success of the project and allowed us to iterate quickly based on their insights and needs."
+                       },
+                       {
+                           "src":  "images/2026_handhold/prototype_history.png",
+                           "title":  "Prototype History",
+                           "description":  "A graphic I created to illustrate the history of our prototypes and how the design evolved over time based on feedback and testing."
+                       },
+                       {
+                           "src":  "images/2026_handhold/preliminary_mold_design_injection_molding.png",
+                           "title":  "Preliminary Mold Design",
+                           "description":  "I created this preliminary mold design for injection molding the final clip design. The mold is designed to be a simple two-part mold with a single cavity to minimize manufacturing costs while meeting the production needs for the project."
+                       }
+                   ]
+    },
+    {
     "name": "Pipsqueak Engine",
-    "category": "Mechanical Design & Manufacturing",
+    "category": "Product Development",
     "role": "Project Machinist",
     "org": "Brigham Young University",
-    "dates": "2023",
-    "award": null,
-    "description": "Placeholder description for this Pipsqueak engine project. Add the final project summary, machining process, tolerances, drawings, and final assembly notes here.",
+    "dates": "January – April 2023",
+    "award": "Lowest Operating Pressure - 2023 Air Engine Competition · 10 Teams",
+    "description": "Designed and manufactured a small single-piston compressed air engine with manually machined components produced on the lathe and end mill. The project also included detailed engineering drawings, manufacturing process documentation, and redesigning the engine for high-volume injection molding production.",
     "highlights": [
-      "Placeholder highlight for machining and fabrication",
-      "Placeholder highlight for drawings, process planning, or assembly",
-      "Placeholder highlight for completed engine results"
+        "Manually machined all engine components using a lathe and end mill",
+        "Created engineering drawings and manufacturing process sheets for each component",
+        "Conceptually redesigned the engine for high-volume injection molding manufacturing and assembly"
     ],
-    "tags": ["Machining", "Manufacturing", "Technical Drawings", "Assembly"],
+    "tags": [
+        "Machining",
+        "Manufacturing",
+        "Technical Drawings",
+        "Assembly"
+    ],
     "images": [
-      "images/2023_pipsqueak_engine/completed_1.jpg",
-      "images/2023_pipsqueak_engine/completed_2.jpg",
-      "images/2023_pipsqueak_engine/drawing.png",
-      "images/2023_pipsqueak_engine/exploded_view.png",
-      "images/2023_pipsqueak_engine/process_sheet.png",
-      "images/2023_pipsqueak_engine/render_1.JPG",
-      "images/2023_pipsqueak_engine/render_2.JPG",
-      "images/2023_pipsqueak_engine/uprights.jpg"
+        {
+            "src": "images/2023_pipsqueak_engine/completed_1.jpg",
+            "title": "Completed Engine",
+            "description": "The final assembled compressed air engine manufactured from individually machined components."
+        },
+        {
+            "src": "images/2023_pipsqueak_engine/completed_2.jpg",
+            "title": "Rear View of the Completed Engine",
+            "description": "Rear view of the completed engine showing the compact assembly layout and machined structural components."
+        },
+        {
+            "src": "images/2023_pipsqueak_engine/uprights.jpg",
+            "title": "Machined Uprights",
+            "description": "Machined uprights manufactured together using sandwich fixturing in the milling vise to improve alignment and machining consistency."
+        },
+        {
+            "src": "images/2023_pipsqueak_engine/drawing.png",
+            "title": "Small Upright Drawing",
+            "description": "Example of one of the detailed engineering drawings I created for manufacturing."
+        },
+        {
+            "src": "images/2023_pipsqueak_engine/exploded_view.png",
+            "title": "Exploded View",
+            "description": "Exploded assembly view showing the relationship and organization of the machined engine components."
+        },
+        {
+            "src": "images/2023_pipsqueak_engine/process_sheet.png",
+            "title": "Manufacturing Process Sheet",
+            "description": "Example manufacturing process sheet documenting machining operations including, setups, fixturing, and tooling."
+        },
+        {
+            "src": "images/2023_pipsqueak_engine/render_1.JPG",
+            "title": "Injection Molded Design - Render 1",
+            "description": "Redesigned engine concept adapted for high-volume injection molding manufacturing with considerations for large-scale production."
+        },
+        {
+            "src": "images/2023_pipsqueak_engine/render_2.JPG",
+            "title": "Injection Molded Design - Render 2",
+            "description": "Injection molded redesign featuring draft angles, constant wall thicknesses, manufacturable parting lines, and plastic assembly features."
+        }
     ]
-  },
-  {
-    "name": "Camping Shovel Design",
-    "category": "Mechanical Design & Manufacturing",
-    "role": "Project Designer",
+},
+    {
+    "name": "Camping Shovel",
+    "category": "Product Development",
+    "role": "Mechanical Designer",
     "org": "Brigham Young University",
-    "dates": "2024",
+    "dates": "September – December 2024",
     "award": null,
-    "description": "Placeholder description for this camping shovel project. Add the final project summary, design requirements, material/process choices, analysis, and final results here.",
+    "description": "Designed and manufactured a lightweight camping shovel through a structured engineering design process involving market research, material selection, structural analysis, and fabrication. The blade was heat treated through quenching and tempering to achieve a hardness of 51.3 HRC while maintaining durability during digging and prying tasks. The final shovel was approximately 30% lighter than the average commercially available camping shovel.",
     "highlights": [
-      "Placeholder highlight for CAD and design work",
-      "Placeholder highlight for machining, heat treatment, or fabrication",
-      "Placeholder highlight for analysis, testing, or final performance"
+        "Performed engineering analysis and material selection using bending, hardness, and weight calculations",
+        "Manufactured the shovel using sheet metal rolling, end milling, and heat treatment processes such as quenching and tempering",
+        "Achieved a final blade hardness of 51.3 HRC with a shovel weight 30% lower than comparable commercial products"
     ],
-    "tags": ["Product Design", "Machining", "Analysis", "Manufacturing"],
+    "tags": [
+        "Product Design",
+        "Machining",
+        "Engineering Analysis",
+        "Material Selection",
+        "Manufacturing",
+        "Steel Heat Treating"
+    ],
     "images": [
-      "images/2024_camping_shovel/3_point_bend.png",
-      "images/2024_camping_shovel/cantilever.png",
-      "images/2024_camping_shovel/cutting_blade.png",
-      "images/2024_camping_shovel/milling_handle.png",
-      "images/2024_camping_shovel/quenching_blade_1.jpg",
-      "images/2024_camping_shovel/quenching_blade_2.png",
-      "images/2024_camping_shovel/results.png",
-      "images/2024_camping_shovel/sholve_completed.png",
-      "images/2024_camping_shovel/shovel_CAD.png",
-      "images/2024_camping_shovel/tempering_blade.jpg"
+        {
+            "src": "images/2024_camping_shovel/sholve_completed.png",
+            "title": "Shovel Completed",
+            "description": "Final manufactured camping shovel designed for lightweight portability and durability during outdoor use. The blade is made of quenched and tempered steel to achieve a high hardness and yield strnegth. The handle is made of aluminum to reduce weight while maintaining sufficient strength for digging and prying tasks."
+        },
+        {
+            "src": "images/2024_camping_shovel/shovel_CAD.png",
+            "title": "Shovel CAD",
+            "description": "CAD model of the camping shovel used to refine geometry, manufacturability, and structural performance."
+        },
+        {
+            "src": "images/2024_camping_shovel/cutting_blade.png",
+            "title": "Cutting Blade",
+            "description": "Hand-cut steel shovel blade using a printed outline prior to forming, machining, and heat treatment operations."
+        },
+        {
+            "src": "images/2024_camping_shovel/milling_handle.png",
+            "title": "Milling Handle",
+            "description": "I machined the shovel handle on the end mill to create the final handle geometry and assembly features."
+        },
+        {
+            "src": "images/2024_camping_shovel/quenching_blade_1.jpg",
+            "title": "Quenching Blade 1",
+            "description": "Heat treatment process where the shovel blade was heated to 1600°F and quenched in oil."
+        },
+        {
+            "src": "images/2024_camping_shovel/quenching_blade_2.png",
+            "title": "Quenching Blade 2",
+            "description": "Blade immediately after quenching during the steel heat treatment process."
+        },
+        {
+            "src": "images/2024_camping_shovel/tempering_blade.jpg",
+            "title": "Tempering Blade",
+            "description": "Tempering process performed after quenching to improve toughness while retaining high hardness. The blade was then immediately tempered at 450°F for half an hour and then air cooled to achieve the final hardness of 51.3 HRC."
+        },
+        {
+            "src": "images/2024_camping_shovel/3_point_bend.png",
+            "title": "3 Point Bend Test",
+            "description": "Three-point bending analysis used to evaluate estimate stresses and deformation during shovel use."
+        },
+        {
+            "src": "images/2024_camping_shovel/cantilever.png",
+            "title": "Cantilever Bend Test",
+            "description": "Cantilever loading analysis performed to estimate the structural integrity of the blade-handle interface during digging and prying."
+        },
+        {
+            "src": "images/2024_camping_shovel/results.png",
+            "title": "Results",
+            "description": "Summary of prototype performance during the aforementioned structural testing."
+        }
     ]
-  },
-  {
-    "name": "ECEN Technician Fabrication Projects",
-    "category": "Rapid Prototyping & Fabrication",
-    "role": "ECEN Technician",
-    "org": "Brigham Young University",
-    "dates": "2024",
+},
+    {
+    "name": "Technician Fabrication Projects",
+    "category": "Product Development",
+    "role": "Senior Technician",
+    "org": "Experiential Learning Center - BYU Dept. of Electrical Engineering",
+    "dates": "September 2021 – April 2024",
     "award": null,
-    "description": "Placeholder description for these ECEN technician fabrication projects. Add the final summary of shop work, design support, fabrication tasks, and technical contributions here.",
+    "description": "Supported a wide range of fabrication, prototyping, and manufacturing projects as a senior technician for the BYU Experiential Learning Center. Responsibilities included CAD design, machining, additive manufacturing, sheet metal fabrication, mold making, casting, and workshop instruction.",
     "highlights": [
-      "Placeholder highlight for design support or fabrication work",
-      "Placeholder highlight for 3D printing, molding, electronics support, or shop tools",
-      "Placeholder highlight for completed fixtures, prototypes, or student support"
+        "Designed and fabricated a portable gaming console enclosure and supported production of 120 assembly kits",
+        "Designed and constructed a $3,200 fire-resistant combat robotics arena using impact-resistant materials and fabrication methods",
+        "Engineered and constructed a heavy-duty workshop table design, then trained and supervised 6 students in the fabrication and assembly of 8 units totaling over $2,000 in production value."
     ],
-    "tags": ["Fabrication", "3D Printing", "Mold Making", "Technical Support"],
-    "images": [
-      "images/2024_ecen_technician/3d_printer_nozzle_holder.jpg",
-      "images/2024_ecen_technician/game_controller_back.jpg",
-      "images/2024_ecen_technician/game_controller_front.jpg",
-      "images/2024_ecen_technician/hilt.jpg",
-      "images/2024_ecen_technician/mold_making.jpg",
-      "images/2024_ecen_technician/old_vs_new_hilt.jpg",
-      "images/2024_ecen_technician/robot_arena.jpg",
-      "images/2024_ecen_technician/robot_arena_upright.jpg",
-      "images/2024_ecen_technician/test_box_back.jpg",
-      "images/2024_ecen_technician/test_box_front.jpg"
-    ]
-  },
-  {
-    "name": "Inflatable Robotic Truss — Automated Roller",
-    "category": "Robotics & Autonomous Systems",
-    "role": "Compliant Mechanisms & Robotics Research Assistant",
-    "org": "BYU Dept. of Mechanical Engineering",
-    "dates": "June 2024 – Present",
-    "award": "Presented at NASA Big Idea Challenge Forum, Las Vegas",
-    "description": "Redesigned the automated roller mechanism for an inflatable robotic truss, achieving dramatic weight and cost reductions while doubling structural strength. Engineered a multi-stage gear train using off-the-shelf components to improve torque and reliability.",
-    "highlights": [
-      "31% weight reduction, 51% cost savings, 2× structural strength",
-      "Constructed 21 roller units with custom vise fixtures for precision machining",
-      "Presented to NASA planetary scientists at 2024 Big Idea Challenge Forum & LSIC"
+    "tags": [
+        "Machining",
+        "3D Printing",
+        "Mold Making",
+        "Sheet Metal Fabrication",
+        "Laser-Cutting"
     ],
-    "tags": ["CAD", "Multi-Stage Gear Train Design", "Precision Machining", "Structural Analysis", "NASA Research", "Space Robotics"],
+    "imageFit": "contain",
     "images": [
-      "images/2026_truss_robot/me_and_robot.JPG",
-      "images/2026_truss_robot/passive_roller.png",
-      "images/2026_truss_robot/me_and_robot_2.JPG",
-      "images/2026_truss_robot/me_and_robot_3.JPG",
-      "images/2026_truss_robot/truss_robot.jpg",
-      "images/2026_truss_robot/active_roller.png",
-      "images/2026_truss_robot/testing_truss.jpg",
-      "images/2026_truss_robot/active_roller_exploded.png",
-      "images/2026_truss_robot/truss_team.jpg",
-      "images/2026_truss_robot/team_photo.jpg",
-      "images/2026_truss_robot/truss_stowed.jpg",
-      "images/2026_truss_robot/architecture_roller_motion.png"
+        {
+            "src": "images/2024_ecen_technician/3d_printer_nozzle_holder.jpg",
+            "title": "3D Printer Nozzle Holder",
+            "description": "Custom sheet metal nozzle holder I designed for an Ender 3 3D printer along with its assembly instructions."
+        },
+        {
+            "src": "images/2024_ecen_technician/game_controller_front.jpg",
+            "title": "Game Controller Front",
+            "description": "Front enclosure for a portable gaming console designed and manufactured for student assembly kits used during summer camps."
+        },
+        {
+            "src": "images/2024_ecen_technician/game_controller_back.jpg",
+            "title": "Game Controller Back",
+            "description": "Rear housing of the portable gaming console featuring integrated mounting and assembly features."
+        },
+        {
+            "src": "images/2024_ecen_technician/mold_making.jpg",
+            "title": "Mold Making",
+            "description": "The mold-making process used for fabrication and casting the hilt of a prop sword used in tenure events by professors."
+        },
+        {
+            "src": "images/2024_ecen_technician/old_vs_new_hilt.jpg",
+            "title": "Old Vs New Hilt",
+            "description": "Comparison between the rough original hilt and my redesigned cast hilt."
+        },
+        {
+            "src": "images/2024_ecen_technician/hilt.jpg",
+            "title": "Hilt",
+            "description": "A close-up of the cast hilt showcasing the nice finish on the silicon-bronze cast and the leather wrapping."
+        },
+        {
+            "src": "images/2024_ecen_technician/battle_bots_arena.png",
+            "title": "Arena Features",
+            "description": "This is a graphic I made to show the key features of the combat robotics arena I designed and built for the 2023 Ant Annihilation competition. The arena was designed to be fire-resistant and impact-resistant to withstand combat robotics competitions while providing a safe environment for the spectators."
+        },
+        {
+            "src": "images/2024_ecen_technician/robot_arena.jpg",
+            "title": "Robot Arena",
+            "description": "Fire-resistant and impact-resistant combat robotics arena."
+        },
+        {
+            "src": "images/2024_ecen_technician/robot_arena_upright.jpg",
+            "title": "Robot Arena Upright",
+            "description": "Structural frame and upright supports of the combat robotics arena for transportation."
+        },
+        {
+            "src": "images/2024_ecen_technician/test_box_front.jpg",
+            "title": "Test Box Front",
+            "description": "A smaller version of the battle bots arena for testing combat robots."
+        },
+        {
+            "src": "images/2024_ecen_technician/heavy_duty_table.png",
+            "title": "Heavy Duty Workshop Table",
+            "description": "Dimensions of the heavy duty workshop table I designed for a large-scale modular platform."
+        }
     ]
-  }
+},
+    {
+        "name":  "Personalized Ski Design Optimization Tool",
+        "category":  "Software Projects",
+        "role":  "Software Developer",
+        "org":  "Brigham Young University",
+        "dates":  "March – April 2025",
+        "award":  null,
+        "description":  "A Python optimization framework that generates custom, lightweight ski geometries from user-specific inputs (height, weight, riding style). Integrated a live Onshape CAD model via API to update geometry and retrieve mass at each iteration.",
+        "highlights":  [
+                           "~30% mass reduction vs. commercial skis while maintaining performance constraints",
+                           "Live Onshape CAD integration via API — geometry updates at each optimizer step",
+                           "SLSQP constrained optimization over length, waist width, camber, thickness"
+                       ],
+        "tags":  [
+                     "Python",
+                     "SLSQP Constrained Optimization",
+                     "Onshape CAD API Integration",
+                     "Parametric Geometry Design",
+                     "Engineering Design Optimization"
+                 ],
+        "images":  [
+                       {
+                           "src":  "images/2025_ski_optimization/ski_onshape.png",
+                           "title":  "Variable Studio",
+                           "description":  "The variable studio used to define the ski geometry and update it at each iteration of the optimization process. The variable studio allows the optimizer to modify the ski geometry based on the design variables and constraints defined in the optimization framework."
+                       },
+                       {
+                           "src":  "images/2025_ski_optimization/design_variables.png",
+                           "title":  "Ski Geometry and Design Variables",
+                           "description":  "The geometric parameters used in the variable studio to define the ski geometry."
+                       },
+                       {
+                           "src":  "images/2025_ski_optimization/python_framework.png",
+                           "title":  "Python Program",
+                           "description":  "An overview of the Python program I developed for this optimization project. First, user inputs are defined, then the program creates bounds for all paramters. Then, an initial guess is generated and the optimization process is iteratively performed."
+                       },
+                       {
+                           "src":  "images/2025_ski_optimization/optimization_framework.png",
+                           "title":  "Optimization Framework",
+                           "description":  "An overview of the optimization framework showing how the design variables, Onshape API, constraints, and objective function are integrated together to perform the optimization process."
+                       },
+                       {
+                           "src":  "images/2025_ski_optimization/onshape_api.png",
+                           "title":  "Onshape API Integration",
+                           "description":  "Integration of the Onshape CAD API for live geometry updates during optimization."
+                       },
+                       {
+                           "src":  "images/2025_ski_optimization/ski_optimization.gif",
+                           "title":  "API Gif",
+                           "description":  "This is the the API running through 100 different ski geometries during the plotting process to create the contour plots."
+                       },
+                       {
+                           "src":  "images/2025_ski_optimization/results_1.png",
+                           "title":  "Optimization Results for Powder Skis",
+                           "description":  "This is one of the optimization results showing the optimized ski geometry for a powder ski design. The optimized design achieves a significant mass reduction with an increase in turn radius (less maneuverability)."
+                       },
+                        {
+                        "src":  "images/2025_ski_optimization/results_2.png",
+                        "title":  "Optimization Results for Carving Skis",
+                        "description":  "This is another optimization result showing the optimized ski geometry for a carving ski design. The optimized design achieves similar mass and performance characteristics to skis on the market, validating the optimization approach."
+                        }
+                   ]
+    },
+    {
+        "name":  "Goal Convergence \u0026 Obstacle Avoidance — Kuka LBR Arm",
+        "category":  "Software Projects",
+        "role":  "Robotics Software Developer",
+        "org":  "Brigham Young University",
+        "dates":  "September – December 2023",
+        "award":  null,
+        "description":  "Built a complete Python kinematics library for a 7-DOF Kuka LBR arm including DH parameterization, forward/inverse kinematics, Jacobian computation, and a potential field obstacle avoidance algorithm for both static and dynamic obstacles.",
+        "highlights":  [
+                           "Implemented Denavit–Hartenberg parameterization for 7-DOF arm",
+                           "Potential field methods applied at joints and along links for obstacle avoidance",
+                           "Generated linear, circular, and spiral dynamic obstacle trajectories for testing"
+                       ],
+        "tags":  [
+                     "Python",
+                     "Forward \u0026 Inverse Kinematics",
+                     "Jacobian Computation",
+                     "Potential Field Obstacle Avoidance",
+                     "7-DOF Arm"
+                 ],
+        "images":  [
+                       {
+                           "src":  "images/2023_kuka_arm_simulation/kuka_lbr_arm.jpg",
+                           "title":  "Kuka Lbr Arm",
+                           "description":  "Kuka Lbr Arm"
+                       },
+                       {
+                            "type":  "video",
+                            "url":  "https://youtu.be/z-hkOwEYdBQ",
+                            "title":  "Kuka Arm Simulation",
+                            "description":  "This video shows the Kuka arm simulation I developed in Python. The arm is converging and locking onto the green target while trying to avoid the yellow obstacle. Future plans for this project include implementing self-collision avoidance and dampening the arm's velocity when adjusting near the obstacle to prevent overshooting and oscillations."
+                        }
+                   ]
+    },
+    {
+        "name":  "Robotic Arm Project",
+        "category":  "Early Projects",
+        "role":  "Mechanical Designer",
+        "org":  "Personal Project",
+        "dates":  "2021",
+        "award":  null,
+        "description":  "Designed and built a 6 degree-of-freedom robotic arm that can grasp and manipulate objects. The arm was designed in Fusion 360 and the parts were 3D printed and assembled with servo motors for actuation. The arm was controlled using an Arduino microcontroller and custom circuitry that used PWM and potentiometers to interface with the servos.",
+        "highlights":  [
+                           "Designed the arm with 6 degrees of freedom to allow for a wide range of motion and dexterity",
+                           "Built custom circuitry to control the servo motors using an Arduino microcontroller",
+                           "Implemented a control scheme using potentiometers to adjust the position of each joint and allow for manual control of the arm"
+                       ],
+        "tags":  [
+                     "Robotics",
+                     "Mechanical Design",
+                     "Electronics",
+                     "Arduino Programming",
+                     "Servo Actuation",
+                     "CAD"
+                 ],
+        "images":  [
+                       {
+                           "src":  "images/2021_robotic_arm/actual_arm.jpg",
+                           "title":  "Actual Arm",
+                           "description":  "Actual Arm"
+                       },
+                       {
+                            "type":  "video",
+                            "url":  "https://youtube.com/shorts/qx4l-5Bp8Uw?feature=share",
+                            "title":  "Arm grasping and manipulating a cardboard box",
+                            "description":  "This video shows the robotic arm grasping and manipulating a light cardboard box."
+                       },
+                       {
+                           "src":  "images/2021_robotic_arm/arm_circuitry.jpg",
+                           "title":  "Arm Circuitry",
+                           "description":  "This picture shows the electronics and circuitry I built to control the arm. The circuit uses potentiometers for the user to manually adjust the position of each joint and PWM signals to control the servo motors."
+                       },
+                       {
+                           "src":  "images/2021_robotic_arm/render.jpg",
+                           "title":  "Arm CAD Render",
+                           "description":  "A simple render of the robotic arm CAD model showing the design of the joints and overall structure of the arm. The CAD model was used to plan the design and assembly of the arm and to create reference images for manufacturing."
+                       },
+                       {
+                           "src":  "images/2021_robotic_arm/render.jpg",
+                           "title":  "Render of the arm grasping a box",
+                           "description":  "This is a render of the arm grasping a box with my name on it."
+                       }
+                   ]
+    },
+    {
+        "name":  "Curiosity Rover Replica",
+        "category":  "Early Projects",
+        "role":  "CAD Designer",
+        "org":  "Personal Project",
+        "dates":  "2020",
+        "award":  null,
+        "description":  "Created a detailed CAD model of the NASA Curiosity rover and rendered the design.",
+        "highlights":  [
+                           "Modeled the body, rocker-bogie suspension system, wheels, and robotic arm of the Curiosity rover",
+                           "Spent 30+ hours researching and modeling the intricate details of the rover's design using reference images and technical specifications",
+                           "Rendered the CAD model using Fusion 360 to create photorealistic images showcasing the design"
+                       ],
+        "tags":  [
+                     "Fusion 360",
+                     "Rover Design",
+                     "Mechanical Design",
+                     "CAD Rendering"
+                 ],
+        "images":  [
+                       {
+                           "src":  "images/2020_curiosity_replica/cad_picture.jpg",
+                           "title":  "CAD Model",
+                           "description":  "CAD Model of the Curiosity rover showing the detailed design of the body, suspension system, wheels, and robotic arm."
+                       },
+                       {
+                           "src":  "images/2020_curiosity_replica/curiosity_render_1.jpg",
+                           "title":  "Frontal Render",
+                           "description":  "Frontal Render of the Curiosity model showcasing the arm and camera details."
+                       },
+                       {
+                           "src":  "images/2020_curiosity_replica/curiosity_render_2.jpg",
+                           "title":  "Isometric Render",
+                           "description":  "Isometric Render of the Curiosity model showcasing the body and suspension system."
+                       },
+                       {
+                           "src":  "images/2020_curiosity_replica/curiosity_render_3.jpg",
+                           "title":  "Back Render",
+                           "description":  "Back Render of the Curiosity model showcasing the rear components."
+                       }
+                   ]
+    },
+    {
+        "name":  "High-Power Rocketry Project",
+        "category":  "Early Projects",
+        "role":  "Mechanical Designer",
+        "org":  "Personal Project",
+        "dates":  "2019",
+        "award":  null,
+        "description":  "Designed and built a level 1 solid-fuel rocket by combining off-the-shelf components and custom parts manufactured using laser-cutting. The project included CAD design, fabrication, testing, and launch preparation. The rocket was successfully launched and deployed its parachute to land safely.",
+        "highlights":  [
+                           "Designed the rocket using a combination of off-the-shelf components for the body and nose cone and custom laser-cut parts for the fins",
+                           "Manufactured the fins using a laser cutter and assembled the rocket",
+                           "Successfully launched the rocket and deployed the parachute for a safe landing"
+                       ],
+        "tags":  [
+                     "Rocketry",
+                     "Fabrication",
+                     "Testing",
+                     "Design",
+                     "Teamwork"
+                 ],
+        "images":  [
+                       {
+                           "src":  "images/2019_rocketry/me_and_rocket.jpg",
+                           "title":  "The rocket",
+                           "description":  "Me holding the rocket at the launch site prior to preparing for launch."
+                       },
+                       {
+                            "type":  "video",
+                            "url":  "https://youtube.com/shorts/VOhutWBSWs0?feature=share",
+                            "title":  "Rocket Launch",
+                            "description":  "This video shows the launch of the rocket."
+                       },
+                       {
+                            "type":  "video",
+                            "url":  "https://youtube.com/shorts/25SZ46gnE1o?feature=share",
+                            "title":  "Parachute Deployment and Landing",
+                            "description":  "This video shows the parachute deploying during the rocket's descent and the successful landing of the rocket."
+                       },
+                       {
+                           "src":  "images/2019_rocketry/rocket.jpg",
+                           "title":  "Rocket constructed",
+                           "description":  "The finished rocket prior to painting."
+                       },
+                       {
+                           "src":  "images/2019_rocketry/fin_allignment.jpg",
+                           "title":  "Fin Allignment",
+                           "description":  "This picture shows the fin alignment process where we used a simple jig to ensure the fins were properly aligned and secured to the rocket body for stable flight."
+                       },
+                       {
+                           "src":  "images/2019_rocketry/lunchpad.jpg",
+                           "title":  "Rocket on the Lunchpad",
+                           "description":  "The rocket positioned on the launch pad prior to launch."
+                       },
+                       {
+                           "src":  "images/2019_rocketry/landing.jpg",
+                           "title":  "Landing Site",
+                           "description":  "The landing site with the intact rocket and the parachute showing the successful landing."
+                       }
+                   ]
+    },
+    {
+        "name":  "Stencil Artwork",
+        "category":  "Art Projects",
+        "role":  "Designer",
+        "org":  "Personal Project",
+        "dates":  "2023",
+        "award":  null,
+        "description":  "One of my hobbies is creating stencil artwork by laser-cutting intricate designs, layering them, and using spray paint to create vibrant and detailed pieces. I have created a variety of stencil artworks featuring different themes and styles, including portraits, abstract designs, and shape-inspired pieces.",
+        "highlights":  [
+                           "Skecthed intricate stencil patterns and created stencils using laser-cutting techniques to ensure precision and detail",
+                           "Strategized on how to layer multiple stencils to achieve detailed shading and color blending effects",
+                           "Experimented with different spray paint techniques and color combinations to create vibrant and dynamic artwork"
+                       ],
+        "tags":  [
+                     "Stencil Art",
+                     "Spray Paint",
+                     "Design",
+                     "Color Blending",
+                     "Layering"
+                 ],
+        "images":  [
+                       {
+                           "src":  "images/Art/half_face.jpg",
+                           "title":  "Half Face",
+                           "description":  "One of my most intricate stencil artworks featuring a half-face design with detailed shading and color blending."
+                       },
+                       {
+                           "src":  "images/Art/half_face_closeup.jpg",
+                           "title":  "Half Face Close-up",
+                           "description":  "A close-up view of the half-face stencil artwork, showcasing the texture and color blending achieved through multiple layers of spray paint."
+                       },
+                       {
+                           "src":  "images/Art/flame.jpg",
+                           "title":  "Flame",
+                           "description":  "A vibrant stencil artwork depicting a brutalist-style flame with dynamic color gradients and layered effects."
+                       },
+                       {
+                           "src":  "images/Art/flame_closeup.jpg",
+                           "title":  "Flame Close-up",
+                           "description":  "A close-up view of the flame stencil artwork."
+                       },
+                       {
+                           "src":  "images/Art/pillars.jpg",
+                           "title":  "Pillars",
+                           "description":  "A stencil artwork featuring a series of abstract pillars with bold lines and contrasting colors."
+                       },
+                       {
+                           "src":  "images/Art/cubes.jpg",
+                           "title":  "Cubes",
+                           "description":  "Experimenting with 3D shapes and perspective as well as blending geometric forms."
+                       },
+                       {
+                           "src":  "images/Art/cubes_closeup.jpg",
+                           "title":  "Cubes Close-up",
+                           "description":  "A close-up view of the cubes stencil artwork."
+                       },
+                       {
+                           "src":  "images/Art/atlas_stencil.jpg",
+                           "title":  "Atlas Stencil",
+                           "description":  "Experimenting with smeared layers and text stencil techniques."
+                       }
+                   ]
+    }
+
 ]
+

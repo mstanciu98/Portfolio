@@ -427,7 +427,6 @@
       line-height: 1.7;
       color: var(--text);
       margin-bottom: 20px;
-      flex: 1;
     }
 
     .project-highlights {
@@ -455,7 +454,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-top: auto;
     }
 
     .tag {
@@ -501,9 +499,9 @@
     .modal-content {
       position: relative;
       width: min(1040px, 100%);
-      max-height: 92vh;
+      height: min(860px, 92vh);
       display: grid;
-      grid-template-rows: auto 1fr auto;
+      grid-template-rows: auto minmax(0, 1fr) 174px;
       background: var(--bg2);
       border: 1px solid var(--line);
     }
@@ -547,8 +545,8 @@
 
     .carousel-stage {
       position: relative;
-      min-height: 320px;
-      max-height: 64vh;
+      height: 100%;
+      min-height: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -557,14 +555,15 @@
     }
 
     .carousel-image {
-      max-width: 100%;
-      max-height: 64vh;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
       display: block;
     }
 
     #carousel-media {
       width: 100%;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -572,9 +571,7 @@
 
     .carousel-video {
       width: 100%;
-      aspect-ratio: 16 / 9;
-      height: auto;
-      max-height: 64vh;
+      height: 100%;
       border: 0;
       display: block;
     }
@@ -598,6 +595,8 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       text-shadow: var(--text-pop);
+      min-height: 0;
+      overflow: hidden;
     }
 
     .carousel-description {
@@ -607,11 +606,18 @@
       letter-spacing: 0;
       line-height: 1.55;
       text-transform: none;
+      max-height: 3.1em;
+      margin: 0;
+      overflow: auto;
     }
 
     .carousel-path {
       justify-self: start;
-      overflow-wrap: anywhere;
+      min-width: 0;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       text-align: left;
     }
 
@@ -627,6 +633,7 @@
       overflow-x: auto;
       padding-top: 6px;
       scrollbar-width: thin;
+      min-height: 50px;
     }
 
     .carousel-thumb {
@@ -838,8 +845,11 @@
       .carousel-btn { width: 36px; height: 36px; }
       .carousel-prev { left: 10px; }
       .carousel-next { right: 10px; }
+      .modal-content { grid-template-rows: auto minmax(0, 1fr) 214px; }
       .carousel-footer { grid-template-columns: 1fr; }
       .carousel-count { justify-self: start; text-align: left; }
+      .carousel-description { max-height: 4.65em; }
+      .carousel-path { white-space: normal; }
       footer { flex-direction: column; gap: 12px; text-align: center; }
     }
 
@@ -906,7 +916,7 @@
   </div>
   <div class="about-grid">
     <div class="about-photo">
-        <img src="images/Me/forrest_gump.jpg" alt="Mihai Stanciu">
+        <img src="images/Me/me.jpg" alt="Mihai Stanciu">
     </div>
     <div class="about-text">
       <h3>Engineering at the intersection of mechanism, robotics, and manufacturing.</h3>
@@ -954,7 +964,7 @@
   <div class="contact-grid">
     <p class="contact-blurb">
       I'm always open to conversations about engineering, research collaborations,
-      internship opportunities, or just interesting problems worth solving. Reach out
+      job opportunities, or just interesting problems worth solving. Reach out
       through any of the channels below.
     </p>
     <div class="contact-links">
@@ -1252,6 +1262,7 @@
             src: rawURL,
             embedSrc: embedURL,
             thumbnail: media.thumbnail || '',
+            title: media.title || media.name || media.description || media.caption || '',
             description: media.description || media.caption || ''
           };
         }
@@ -1266,6 +1277,7 @@
           src: media,
           embedSrc: embedURL,
           thumbnail: '',
+          title: description,
           description
         };
       })
@@ -1277,6 +1289,10 @@
     return item.name && item.name.toLowerCase().includes('handhold') ? 'right center' : 'center';
   }
 
+  function projectCoverFit(item) {
+    return item.imageFit || 'cover';
+  }
+
   function projectCoverMarkup(item, index) {
     const media = mediaEntries(item);
 
@@ -1286,6 +1302,7 @@
 
     const imageCount = media.length === 1 ? '1 item' : `${media.length} items`;
     const coverPosition = projectCoverPosition(item);
+    const coverFit = projectCoverFit(item);
     const cover = media[0];
     const coverImage = cover.type === 'video'
       ? cover.thumbnail || `https://img.youtube.com/vi/${cover.embedSrc.split('/').pop()}/hqdefault.jpg`
@@ -1296,7 +1313,7 @@
         <img
           src="${escapeHTML(coverImage)}"
           alt="${escapeHTML(item.name)}"
-          style="object-position: ${escapeHTML(coverPosition)}"
+          style="object-position: ${escapeHTML(coverPosition)}; object-fit: ${escapeHTML(coverFit)}"
           onerror="this.onerror=null; this.parentElement.replaceWith(document.createRange().createContextualFragment(imagePlaceholder(this.getAttribute('src'))))"
         >
         <span class="project-image-count">${imageCount}</span>
@@ -1385,7 +1402,7 @@
       ? `<iframe class="carousel-video" src="${escapeHTML(media.embedSrc)}" title="${escapeHTML(carouselState.projectName)} video ${carouselState.currentIndex + 1}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
       : `<img class="carousel-image" src="${escapeHTML(media.src)}" alt="${escapeHTML(carouselState.projectName)} image ${carouselState.currentIndex + 1}">`;
     carouselCount.textContent = `${carouselState.currentIndex + 1} / ${carouselState.media.length}`;
-    carouselPath.textContent = media.src;
+    carouselPath.textContent = media.title || media.src;
     carouselDescription.textContent = media.description || 'Add a description for this item in items.json.';
     prevBtn.style.display = carouselState.media.length > 1 ? 'inline-flex' : 'none';
     nextBtn.style.display = carouselState.media.length > 1 ? 'inline-flex' : 'none';
@@ -1491,7 +1508,7 @@
         <div class="category-group" style="max-width:1200px; margin:0 auto; padding: 0 48px;">
           <div class="category-panel open">
             <p class="project-desc" style="padding: 36px 40px; background: var(--bg2);">
-              Project content could not be loaded. Serve this folder locally so the browser can fetch items.json.
+              Project content could not be loaded. Open this portfolio through a local web server from the project folder so the browser can fetch items.json. On Windows, run: powershell -ExecutionPolicy Bypass -File .\serve.ps1
             </p>
           </div>
         </div>
@@ -1501,7 +1518,7 @@
   /*
     If you open index.html directly from the filesystem, some browsers block
     fetch('items.json'). Run a local server from this folder instead:
-    python3 -m http.server 8000
+    powershell -ExecutionPolicy Bypass -File .\serve.ps1
   */
 </script>
 
