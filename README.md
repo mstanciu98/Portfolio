@@ -13,6 +13,25 @@ Built as a single `index.html` file — no build tools, no dependencies, ready f
 
 ---
 
+## Preview Locally
+
+The Selected Works section is loaded from `items.json`, so open the site through
+a local web server instead of double-clicking `index.html`.
+
+From this project folder, run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\serve.ps1
+```
+
+Then visit:
+
+```text
+http://localhost:8000/
+```
+
+---
+
 ## File Structure
 
 ```
