@@ -9,8 +9,11 @@ Built as a single `index.html` file — no build tools, no dependencies, ready f
 
 1. Put `index.html` in the root of your GitHub repository
 2. Go to **Settings → Pages → Source** and set it to `main` branch, `/ (root)`
-3. Your site will be live at `https://mstanciu98.github.io/Portfolio/`
+3. Your site will be live at
 
+  ```powershell
+  https://mstanciu98.github.io/Portfolio/
+  ```
 ---
 
 ## Preview Locally
